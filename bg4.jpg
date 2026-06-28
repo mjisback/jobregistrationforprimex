@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<meta name="google-site-verification" content="WhhY9Og4DGOru8_Fy2ZK0q54Doy5_BNMG-kzBt9-xJY">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Auto Parts & Automobile Components Manufacturer | Primex</title>
+<link rel="canonical" href="https://www.primexplast.com" >
+<meta name="keywords" content="Plastic Injection molded components, Injection molded parts, Injection molded plastic parts, Plastic moulded components, Automotive parts, Auto parts, Car parts, Automotive Components, plastic injection parts, Injection molded plastic parts, plastic parts manufacturing companies, Injection mold components" >
+<meta name="author" content="Primex plastics">
+<meta name="description" content="Auto parts manufacturing companies, Primexplast is the leading automobile companies in India and supplies component parts used in a various industries" >
+<meta name="robots" content="index,follow" >
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!--<link rel="preload" fetchpriority="high" as="image" href="images/slider/home2/10.webp" type="image/webp">-->
+<!--<link rel="preload" fetchpriority="high" as="image" href="images/slider/home2/010-mob.webp" type="image/webp">-->
+
+<script>
+
+function loadGtag() {
+if (!window.gtagLoaded) {
+var script = document.createElement('script');
+script.src = 'https://www.googletagmanager.com/gtag/js?id=G-4MFD8JT5GW'; // Replace with your Google Analytics ID
+script.async = true;
+
+document.body.appendChild(script);
+
+script.onload = function() {
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-4MFD8JT5GW'); // Replace with your Google Analytics ID
+window.gtagLoaded = true; // Prevent re-loading
+console.log('gtag.js script loaded');
+}
+}
+}
+
+// Load GTM and gtag.js after the page has fully loaded
+window.addEventListener('load', function() {
+loadGtag();
+});
+</script>
+
+
+
+<!-- End Google Tag Manager -->
+<meta name="Robots" content="INDEX,ALL">
+<meta name="YahooSeeker" content="INDEX, FOLLOW">
+<meta name="msnbot" content="INDEX, FOLLOW">
+<meta name="googlebot" content="INDEX, FOLLOW">
+<meta name="language" content="english">
+<meta name="Expires" content="never">
+<meta name="revisit-after" content="daily">
+<meta name="Author" content="https://www.primexplast.com/">
+<meta name="Distribution" content="Global">
+<meta name="Rating" content= "general">
+<meta name="geo.region" content="India">
+<meta name="geo.placename" content="Bangalore">
+<meta name="search engines" content="ALL">
+<meta name="copyright" content="Primexplast">
+<style>
+.carousel-control .fa-solid {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+}
+</style>
+
+
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+
+
+<script>
+function loadGTM() {
+if (!window.gtmLoaded) {
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PXXJQ6R'); // Replace with your GTM ID
+
+window.gtmLoaded = true; // Prevent re-loading
+console.log('GTM script loaded');
+}
+}
+
+// Load GTM and gtag.js after the page has fully loaded
+window.addEventListener('load', function() {
+loadGTM();
+});
+</script>
+
+<meta name="yandex-verification" content="cdaa9064db12ec1b" >
+
+<!-- ================= Favicon ================== -->
+<link rel="shortcut icon" href="images/favicon/favicon.png">
+<!-- Retina iPad Touch Icon-->
+<link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.html">
+<!-- Retina iPhone Touch Icon-->
+<link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.html">
+<!-- Standard iPad Touch Icon-->
+<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.html">
+<!-- Standard iPhone Touch Icon-->
+<link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.html">
+
+<!--  Google Font -->
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900%7cMontserrat:400,700%7cOpen+Sans:300,300i,400,400i,600,600i,700,700i,800,800i%7cRaleway:300,300i,400,400i,500,600,600i,700,800,900" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+
+
+<!-- Non-blocking CSS -->
+<link rel="preload" as="style" href="css/font-awesome.min.css" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" as="style" href="css/ionicons.min.css" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="stylesheet" href="css/owl-carousel/owl.carousel.css">
+<link rel="stylesheet" href="css/owl-carousel/owl.theme.css">
+<link rel="preload" as="style" href="css/magnific-popup.css" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" as="style" href="css/menuzord.css" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" as="style" href="css/menuzord-animations.css" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" as="style" href="css/responsive.css" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+      
+    
+<noscript>
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/ionicons.min.css">
+<link rel="stylesheet" href="css/magnific-popup.css">
+<link rel="stylesheet" href="css/menuzord.css">
+<link rel="stylesheet" href="css/menuzord-animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</noscript>
+
+
+
+<!-- Modernizr-->
+<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+
+<style>
+@media only screen and (max-width: 768px) {
+.rc-anchor-normal{
+width:209px!important;
+}
+}
+@font-face {
+  font-family: "Font Awesome 6 Free";
+  font-display: swap;
+}
+@font-face {
+  font-family: "Font Awesome 6 Brands";
+  font-display: swap;
+}
+@font-face {
+  font-family: "Font Awesome 6 Solid";
+  font-display: swap;
+}
+</style>
+
+<style>
+.dropbtn {
+/*background-color: #4CAF50;  padding: 16px;*/
+color: white;
+font-family: 'Montserrat', sans-serif;
+font-size: 16px;
+border: none;
+cursor:pointer;
+}
+
+.dropdown {
+position: relative;
+display: inline-block;
+font-family: 'Montserrat', sans-serif;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f1f1f1;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+font-family: 'Montserrat', sans-serif;
+}
+
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+font-family: 'Montserrat', sans-serif;
+}
+
+.dropdown-content a:hover {background-color: #ddd}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+.dropdown:hover .dropbtn {
+/*background-color: #3e8e41;*/
+}
+.product_title h2:hover{
+        color: #d8352d;
+}
+</style>
+
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PXXJQ6R"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- == Topbar One == -->
+<div class="topbar-area">
+<div class="container">
+<div class="row">
+<div class="col-md-6 col-sm-5">
+<div class="contact-number tel_phon ">
+<p>
+<i class="fa fa-mobile" aria-hidden="true"></i> <a style="color:white;" href="tel:+91-8028360779" class="numbi">+91-8028360779</a>
+<i class="fa fa-envelope" style="padding-left: 20px;"></i> <a style="color:white;" href="mailto:karthik@primexplast.com">karthik@primexplast.com</a>
+</p>
+</div>
+</div>
+<div class="col-md-6 col-sm-3">
+<div class="contact-number">
+<p>
+<div class="col-md-3 col-sm-4 col-xs-6 drses submit-button-class" style="margin-left: 270px;margin-top: 4px;padding:7px;background-color:#fff;text-align:center;border-radius:10px;cursor:pointer;">
+<a href="contact.php">Submit Enquiry</a>
+</div>
+
+<div style="margin-top: 10px;">
+<button type="button" style="background:#333333;border:none;font-size: 14px;color: #fff;" data-toggle="modal" data-target="#myModal2">Register</button>&nbsp;&nbsp;&nbsp;&nbsp;
+<i class="fa fa-user" aria-hidden="true" style="color: #fff;"></i><span><button type="button" style="background:#333333; border:none;font-size: 14px;color: #fff;" data-toggle="modal" data-target="#myModal">Login</button></span>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+
+<div class="modal fade" id="myModal2" role="dialog">
+<div class="modal-dialog">
+
+
+<div class="modal-content" style="width:75%;">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+<div class="modal-title"><b>Registration form</b></div>
+</div>
+<div class="modal-body">
+
+<form method="post" class="login-form" action="signup.php?s=1">
+<div class="single-input">
+<input class="form-control" type="text" name="name" placeholder="Enter your Name"  style="width:75%;">
+</div>
+<br>
+<div class="single-input">
+<input class="form-control" type="text" name="phone" placeholder="Enter your Phone"  style="width:75%;">
+</div>
+<br>
+<div class="single-input">
+<input class="form-control" type="email" name="email" placeholder="Enter your E-Mail"  style="width:75%;">
+</div>
+<br>
+<div class="single-input">
+
+<input class="form-control" type="password" name="pass" placeholder=" Password" style="width:75%;">
+</div>
+<br>
+<div class="form-block">
+<button type="submit" class="submit-button" data-toggle="modal" data-target="#myModal" style="border-radius:45%;background: #771019;border: 1px solid #771019;">Register</button>
+</div>
+<div class="divider"></div>
+
+</form>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div class="modal fade" id="myModal" role="dialog">
+<div class="modal-dialog">
+
+
+<div class="modal-content" style="width:75%;">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+<div class="modal-title"><b>Login form</b></div>
+</div>
+<div class="modal-body">
+
+<form method="post" class="login-form" action="signup.php">
+<div class="single-input">
+<input class="form-control" type="text" name="email" placeholder="Enter your E-Mail"  style="width:75%;">
+</div>
+<br>
+<div class="single-input">
+
+<input class="form-control" type="password" name="pass" placeholder=" Password" style="width:75%;">
+</div>
+<br>
+<div class="form-block">
+<button type="submit" class="submit-button" data-toggle="modal" data-target="#myModal" style="border-radius:45%;background: #771019;border: 1px solid #771019;">Sign in</button>
+</div>
+<div class="divider"></div>
+
+</form>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div class="menu-area">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<nav id="menuzord" class="menuzord" style="right: 15px;">
+<a href="https://www.primexplast.com" class="menuzord-brand"><img src="images/pr_logo.jpg" alt="" style="width: 80%;padding-top:5px;"></a>
+<ul class="menuzord-menu">
+<li><a href="index.php" >Home</a>
+
+</li>
+<li><a href="#">About Us</a>
+<ul class="dropdown">
+<li><a href="about.php">History</a></li>
+<li><a href="facility.php">Facility</a></li>
+<li><button type="button" style="background:#262626; border:none;font-weight: 400; padding-top: 10px;
+padding-right: 10px;
+font-family: 'Montserrat', sans-serif;
+font-size: 13px;
+color: #fff;
+text-transform: uppercase;" data-toggle="modal" data-target="#myModal">Financial Report</button></li>
+
+</ul>
+</li>
+
+<li><a href="https://www.primexplast.com/products.php">Products</a>
+<ul class="dropdown">
+<li><a href="automotive.php">Automotive</a></li>
+<li><a href="electrical-and-white-goods.php">Electrical & White Goods</a></li>
+<li><a href="furniture-components-and-sub-assemblies.php">Furniture Components & sub assemblies</a></li>
+
+
+</ul>
+</li>
+<li><a href="quality.php">Quality</a></li>
+<li><a href="customers.php">Customers</a>
+
+</li>
+<li ><a href="awards.php">Awards </a>
+
+</li>
+<li><a href="contact.php">Contact</a></li>
+</ul>
+</nav>
+
+</div>
+
+</div>
+</div>
+</div>
+
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+<!-- Indicators -->
+<ol class="carousel-indicators">
+<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+<li data-target="#myCarousel" data-slide-to="1"></li>
+<li data-target="#myCarousel" data-slide-to="2"></li>
+</ol>
+
+<!-- Wrapper for slides -->
+<div class="carousel-inner">
+<div class="item active">
+<picture>
+<source media="(max-width: 576px)" srcset="images/slider/home3/010_576w.webp">
+<source media="(min-width: 1340px)" srcset="images/slider/home2/010.webp">
+<img src="images/slider/home2/10.webp"  alt="Automotive parts" title="Automotive parts" class="img-responsive "  loading="eager" fetchpriority="high" >
+</picture>
+</div>
+
+<div class="item">
+<picture>
+<source media="(max-width: 576px)" srcset="images/slider/home3/ele_576w.webp">
+<source media="(min-width: 1340px)" srcset="images/slider/home3/ele.webp">
+<img src="images/slider/home2/electri.webp"  alt="Automotive parts" title="Automotive parts" class="img-responsive " loading="lazy"  >
+</picture>
+</div>
+
+<div class="item">
+<picture>
+<source media="(max-width: 576px)" srcset="images/slider/home3/3aa_576w.webp">
+<source media="(min-width: 1340px)" srcset="images/slider/home3/3aa.webp">
+<img src="images/slider/home2/3aaa.webp"  alt="Automotive parts" title="Automotive parts" class="img-responsive " loading="lazy">
+</picture>
+</div>
+</div>
+
+<!-- Left and right controls -->
+<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+  <span class="fa-solid fa-chevron-left" aria-hidden="true"></span>
+  <span class="sr-only">Previous</span>
+</a>
+
+<a class="right carousel-control" href="#myCarousel" data-slide="next">
+  <span class="fa-solid fa-chevron-right" aria-hidden="true"></span>
+  <span class="sr-only">Next</span>
+</a>
+
+</div>
+
+<!-- //Page Banner  -->
+<section class="home-evoluation home-two-evoluation">
+<div class="container">
+<div class="row">
+<div class="col-md-7">
+<div class="single-news no-border detail-news">
+<div class="decription mt100 pdb55" style="text-align: justify;">
+<a style="font-size: 25px; color: white;">WELCOME TO</a>
+<h1 style="
+color: #ed1c24;
+font-size: 39px;
+">PRIMEX PLASTICS Pvt.Ltd.</h1>
+<p>
+Primex Plastics Pvt. Ltd. stands at the forefront as a premier <a href= https://www.primexplast.com/auto-parts-manufacturer.php><b>Auto Parts Manufacturer</b></a>, specializing in precision Injection and Insert molded components. Our products serve leading OEMs and Tier 1 suppliers across various industries, including Automotive, Electrical, Furniture, White Goods, and more.
+</p>
+
+<p>We take pride in our ISO/TS 16949 certification, a testament to our commitment to quality and excellence. Founded and led by seasoned technocrats with over two decades of expertise in Plastics and Sheet Metal component manufacturing, our company combines technical prowess with managerial acumen to deliver superior solutions.</p>
+
+<p>Driven by innovation and dedicated to meeting industry needs, we consistently supply top-tier components that meet stringent standards, ensuring reliability, performance, and satisfaction for our valued clients.</p>
+
+</div>
+</div>
+</div>
+<div class="col-md-5 pdl0 pdr0">
+<div class="image">
+<picture>
+<source media="(max-width: 576px)" srcset="images/home-two/hOME-mob.webp">
+<img src="images/home-two/hOME.webp" class="img-responsive" alt="Plastic Injection molded components" title="Plastic Injection molded components"  width="488" height="366">
+</picture>
+</div>
+</div>
+</div>
+</div>
+<div class="background-img-desktop">
+<img src="images/home/base2.webp" alt="base2">
+</div>
+<div class="background-img-mob">
+<img src="images/home/base2-mob.webp" alt="bas2-mob">
+</div>
+</section>
+<div class="home-two-service">
+<div class="container">
+<div class="row">
+<div class="all-service-for-bg">
+<div class="col-md-4 col-sm-4 pdl0 pdr0">
+<div class="single renovation">
+<div class="image">
+<img src="images/home-two/1.png" alt="Plastic moulded components" title="Plastic moulded components" >
+</div>
+<h4>Our Vision & Mission</h4>
+<p>To build a world class company <br>
+Preferred supplier to global customers<br>
+Rapid adaptation to the latest technologies</p>
+</div>
+</div>
+<div class="col-md-4 col-sm-4 pdl0 pdr0">
+<div class="single interior-painting">
+<div class="image">
+<img src="images/home-two/2.png" alt="Automotive parts" title="Automotive parts" >
+</div>
+<h4>OUR TEAM</h4>
+<p>
+All the departments are headed by qualified and trained professionals with adequate experience in respective fields.
+</p>
+</div>
+</div>
+<div class="col-md-4 col-sm-4 pdl0 pdr0">
+<div class="single design-management">
+<div class="image">
+<img src="images/home-two/3.png" alt="Automotive parts" title="Automotive parts" >
+</div>
+<h4>GLOBAL BUSINESS</h4>
+<p>
+Primex Plastics Pvt.Ltd. is meeting the high expectations on cost and quality of some of the global customers.
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="call-top-action-area pdt95 pdb100">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="home-heading">
+<h2 style="color: white;">Gallery</h2>
+
+</div>
+<div class="content">
+<p>
+PHOTO GALLERY
+</p>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- == Image box ==-->
+<div class="image-box-area mt50">
+<div class="container">
+<div class="row">
+<div class="col-md-4 col-sm-4">
+<div class="single-big-image-box mt50">
+<div class="image">
+<a href="#"><img src="images/project/9ia.webp" alt="Automotive Parts" class="img-responsive" title="Automotive Parts" width="350" height="262"></a>
+</div>
+
+</div><!--./single-big-image-box-->
+</div>
+<div class="col-md-4 col-sm-4">
+<div class="single-big-image-box mt50">
+<div class="image">
+<a href="#"><img src="images/project/8ia.webp" alt="Automotive parts" class="img-responsive" title="Automotive parts" ></a>
+</div>
+
+</div><!--./single-big-image-box-->
+</div>
+<div class="col-md-4 col-sm-4">
+<div class="single-big-image-box mt50">
+<div class="image">
+<a href="#"><img src="images/project/3aii.webp" alt="Car parts" style="height:270px;" class="img-responsive" title="Car parts" loading="lazy"></a>
+</div>
+
+</div><!--./single-big-image-box-->
+</div>
+<div class="col-md-4 col-sm-4">
+<div class="single-big-image-box mt50">
+<div class="image">
+<a href="#"><img src="images/project/ele6ai.webp" alt="Automotive Components" class="img-responsive" title="Automotive Components" loading="lazy" width="350" height="262"></a>
+</div>
+
+</div><!--./single-big-image-box-->
+</div>
+<div class="col-md-4 col-sm-4">
+<div class="single-big-image-box mt50">
+<div class="image">
+<a href="#"><img src="images/project/ele5ii.webp" alt="Electrical & White Goods" class="img-responsive" title="Electrical & White Goods" loading="lazy" width="350" height="262"></a>
+</div>
+
+</div><!--./single-big-image-box-->
+</div>
+<div class="col-md-4 col-sm-4">
+<div class="single-big-image-box mt50">
+<div class="image">
+<a href="#"><img src="images/project/ele1ai.webp" alt="Engineering Electrical Components" class="img-responsive" title="Engineering Electrical Components" loading="lazy" width="350" height="262"></a>
+</div>
+
+</div><!--./single-big-image-box-->
+</div>
+<div class="col-md-4 col-sm-4">
+<div class="single-big-image-box mt50">
+<div class="image">
+<a href="#"><img src="images/project/fur2ai.webp" alt="Furniture and Sub Assemblies" class="img-responsive" title="Furniture and Sub Assemblies" loading="lazy"></a>
+</div>
+
+</div><!--./single-big-image-box-->
+</div>
+<div class="col-md-4 col-sm-4">
+<div class="single-big-image-box mt50">
+<div class="image">
+<a href="#"><img src="images/project/green-1.webp" alt="Furniture Components & Sub Assemblies" class="img-responsive" title="Furniture Components & Sub Assemblies" loading="lazy"></a>
+</div>
+
+</div><!--./single-big-image-box-->
+</div>
+<div class="col-md-4 col-sm-4">
+<div class="single-big-image-box mt50">
+<div class="image">
+<a href="#"><img src="images/project/fur4ai.webp" alt="Furniture Solutions" class="img-responsive" title="Furnitures Solutions" loading="lazy"></a>
+</div>
+
+</div><!--./single-big-image-box-->
+</div>
+</div>
+
+</div>
+</div>
+
+
+<!-- == Footer==-->
+<footer class="space footer-2 mt55" style="padding-top:0px;">
+<div class="container">
+<div class="row">
+<div class="col-md-4 col-sm-4 footer-block ">
+<!--  <h4>ABOUT Company</h4>-->
+<div class="footer-inner">
+<img src="images/pr_logo.webp" class="img-responsive" style="width:85%;" alt="footer_logo">                        
+</div>
+</div>
+<div class="col-md-4 col-sm-4 footer-block useful-links">
+<h4>Quick Links</h4><br>
+
+
+<div class="dropdown">
+<ul><li class="dropbtn"><a href="plastics-molded/plastics-molded-components-exporters-india.php" style="color:white;">Plastics Molded Components</a></li></ul>
+
+
+</div>
+<br>
+
+<div class="dropdown">
+<ul><li class="dropbtn"><a href="automotive-plastic-parts/automotive-plastic-parts-manufacturer.php" style="color:white;">Automotive Plastic Parts</a></li></ul>
+
+</div>
+<br>
+
+<div class="dropdown">
+<ul><li class="dropbtn"><a href="car-seat-belt/car-seat-belt-components.php" style="color:white;">Car Seat Belt Components</a></li></ul>
+
+
+</div>
+<br>
+
+<div class="dropdown">
+<ul><li class="dropbtn"><a href="plastics-molded/plastic-injection-molded-parts-suppliers.php" style="color:white;">Plastic Injection Molded Parts</a></li></ul>
+
+
+</div>
+<br>
+
+<div class="dropdown">
+<ul><li class="dropbtn"><a href="plastic-injection-mold/plastic-injection-molding-equipment-suppliers.php" style="color:white;">Injection Molding Solutions</a></li></ul>
+
+
+</div>
+<br>
+
+<div class="dropdown">
+<ul> <li class="dropbtn">
+<a href="https://www.primexplast.com/sitemap.php" style="color:white">SiteMap</a>
+</li></ul>
+
+</div>
+</div>
+<div class="col-md-4 col-sm-4 footer-block ">
+<h4>ABOUT US</h4><br>
+<div class="footer-inner">
+<p class="point-1" style="color:white;font-size:15px;">Primex Plastics Pvt.Ltd. is a leading manufacturer of plastic injection molded components.</p>
+<div class="contact">
+<p>
+<i class="fa fa-mobile" aria-hidden="true" style="font-size:20px"></i> <a style="color:white;" href="tel:+91-8028360779" class="numbi">+91-8028360779</a>
+<i class="fa fa-envelope" style="padding-left: 20px;"></i>&nbsp;<a style="color:white;" href="mailto:karthik@primexplast.com">karthik@primexplast.com</a>
+</p>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<div class="footer-ber mt70" style="margin-top:10px;">
+<div class="container">
+<div class="row">
+<div class="col-xs-12">
+<div class="footerber-content">
+<div class="col-md-12 col-sm-4">
+<h5 class="copy" style="line-height:25px;font-size: 15px;color: white;">Primexplastic © <script>document.write(new Date().getFullYear())</script> | Powered by: <span><img src="https://www.grank.co.in/assest/photos/g-rank-white-logo.png" alt="grank-logo" style="height:15px;"></span> | Digital Marketing Partner </h5>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</footer>
+<!-- //Footer  -->
+<script>
+// Check if the URL contains '#'
+if (window.location.hash && window.location.hash.indexOf('#') === 0) {
+// Replace '#' with an empty string in the URL without reloading the page
+var newUrl = window.location.href.replace('#', '');
+history.pushState(null, '', newUrl);
+}
+</script>
+<!-- Back to top Link -->
+<div id="to-top" class="main-bg"><span class="fa fa-chevron-up"></span></div>
+<!-- == jQuery Librery == -->
+<script src="js/vendor/jquery-2.2.4.min.js"></script>
+
+<!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>-->
+<!-- == Bootsrap js File == -->
+<script src="js/bootstrap.min.js"></script>
+<script  src="js/smoothscroll.js"></script>
+<!-- == Owl carousel == -->
+<script src="js/owl-carousel/owl.carousel.min.js"></script>
+<!-- == prallex js file == -->
+<script src="js/prallex.js"></script>
+<!-- == menuzord js file == -->
+<script src="js/menuzord.js"></script>
+<!-- == revulation slider js == -->
+<script src="js/slider/jquery.themepunch.revolution.min.js"></script>
+<script src="js/slider/jquery.themepunch.tools.min.js"></script>
+<script src="js/slider/revolution.extension.actions.min.js"></script>
+<script src="js/slider/revolution.extension.layeranimation.min.js"></script>
+<script src="js/slider/revolution.extension.migration.min.js"></script>
+<script src="js/slider/revolution.extension.navigation.min.js"></script>
+<script src="js/slider/revolution.extension.slideanims.min.js"></script>
+<!-- == custom Js File == -->
+<script src="js/custom.js"></script>
+<script>
+"use strict";
+// Slider
+jQuery("#slider1").revolution({
+sliderType: "standard",
+sliderLayout: "auto",
+delay: 9000,
+navigation: {
+keyboardNavigation: "off",
+keyboard_direction: "horizontal",
+mouseScrollNavigation: "off",
+mouseScrollReverse: "default",
+onHoverStop: "off",
+touch: {
+touchenabled: "on",
+swipe_threshold: 75,
+swipe_min_touches: 50,
+swipe_direction: "horizontal",
+drag_block_vertical: false
+},
+arrows: {
+style: "metis",
+enable: false,
+hide_onmobile: true,
+hide_under: 600,
+hide_onleave: true,
+hide_delay: 200,
+hide_delay_mobile: 1200,
+left: {
+h_align: "left",
+v_align: "center",
+h_offset: 20,
+v_offset: 0
+},
+right: {
+h_align: "right",
+v_align: "center",
+h_offset: 20,
+v_offset: 0
+}
+}
+},
+responsiveLevels: [1240,1200,992,668],
+visibilityLevels: [1240,1200,992,668],
+gridheight: [795,795,795,795,955],
+width: 1230,
+});
+</script>
+
+<script>
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+ym(52446538, "init", {
+id:52446538,
+clickmap:true,
+trackLinks:true,
+accurateTrackBounce:true,
+webvisor:true
+});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/52446538" style="position:absolute; left:-9999px;" alt="" ></div></noscript>
+<!--<script async src="https://backend.livhousing.com/bot/create-script-tag?token=d1a02d6f-3eb3-477a-8c34-6ac37da5e3cc" type="application/javascript"></script>-->
+<script>
+(function () {
+    let scriptLoaded = false;
+
+    function loadBotScript() {
+        if (scriptLoaded) return;
+        scriptLoaded = true;
+
+        var s = document.createElement("script");
+        s.src = "https://backend.livhousing.com/bot/create-script-tag?token=d1a02d6f-3eb3-477a-8c34-6ac37da5e3cc";
+        s.type = "application/javascript";
+        s.async = true;
+        document.body.appendChild(s);
+    }
+
+    // Load on first scroll
+    window.addEventListener("scroll", function () {
+        loadBotScript();
+    }, { once: true });
+
+})();
+</script>
+
+</body>
+
+</html>
