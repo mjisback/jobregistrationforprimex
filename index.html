@@ -15,7 +15,10 @@
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
-
+ <link rel="icon" href="images/favicon.ico">
+<meta
+name="description"
+content="PRIMEX Job Registration Portal">
 </head>
 
 <body>
@@ -191,7 +194,7 @@ required>
 
 <label>Marital Status</label>
 
-<select id="marital">
+<select id="marital" name="marital">
 
 <option>Single</option>
 
@@ -253,8 +256,8 @@ required>
 <label>Pincode *</label>
 
 <input
-type="number"
-id="pincode"
+type="text"
+id="<select id="marital" name="marital">"
 required>
 
 </div>
@@ -337,7 +340,7 @@ placeholder="https://yourwebsite.com">
 
 <div class="inputBox">
 <label>Passing Year *</label>
-<input type="number" id="passingYear" min="1990" max="2050" required>
+<input type="text" id="passingYear" min="1990" max="2050" required>
 </div>
 
 <div class="inputBox">
@@ -624,60 +627,6 @@ All Rights Reserved.
 
 <script src="script.js"></script>
 
-<script>
-
-// ===============================
-// Background Slider
-// ===============================
-
-const slides=document.querySelectorAll(".slide");
-
-let currentSlide=0;
-
-function changeBackground(){
-
-slides[currentSlide].classList.remove("active");
-
-currentSlide++;
-
-if(currentSlide>=slides.length){
-
-currentSlide=0;
-
-}
-
-slides[currentSlide].classList.add("active");
-
-}
-
-setInterval(changeBackground,3000);
-
-
-// ===============================
-// Success Modal
-// ===============================
-
-const modal=document.getElementById("successModal");
-
-const close=document.getElementById("closeModal");
-
-close.onclick=function(){
-
-modal.style.display="none";
-
-}
-
-window.onclick=function(e){
-
-if(e.target==modal){
-
-modal.style.display="none";
-
-}
-
-}
-
-</script>
 
 </body>
 
