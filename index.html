@@ -4,54 +4,88 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>PRIMEX Job Registration Portal</title>
 
-<link rel="stylesheet" href="style.css">
+<meta name="description"
+content="PRIMEX Training & Consultancy Pvt. Ltd. Job Registration Portal">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta name="keywords"
+content="Jobs, Careers, Primex, Recruitment, Job Registration">
 
+<meta name="author"
+content="PRIMEX Training & Consultancy Pvt. Ltd.">
+
+<link rel="icon" href="logo.png">
+
+<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<!-- Font Awesome -->
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
- <link rel="icon" href="images/favicon.ico">
-<meta
-name="description"
-content="PRIMEX Job Registration Portal">
+
+<!-- Main CSS -->
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<!-- ================= BACKGROUND SLIDER ================= -->
+<!-- ========================================= -->
+<!-- Background Image Slider -->
+<!-- ========================================= -->
 
 <div class="slider">
 
-<div class="slide active" style="background-image:url('bg1.jpg');"></div>
+<div class="slide active"
+style="background-image:url('bg1.jpg');">
+</div>
 
-<div class="slide" style="background-image:url('bg2.jpg');"></div>
+<div class="slide"
+style="background-image:url('bg2.jpg');">
+</div>
 
-<div class="slide" style="background-image:url('bg3.jpg');"></div>
+<div class="slide"
+style="background-image:url('bg3.jpg');">
+</div>
 
-<div class="slide" style="background-image:url('bg4.jpg');"></div>
+<div class="slide"
+style="background-image:url('bg4.jpg');">
+</div>
 
 </div>
 
 <div class="overlay">
 
-<!-- ================= HEADER ================= -->
+<!-- ========================================= -->
+<!-- HEADER -->
+<!-- ========================================= -->
 
 <header>
 
 <div class="logo">
 
-<img src="logo.png" alt="Primex Logo">
+<img src="logo.png"
+alt="PRIMEX Logo">
 
 <div>
 
-<h1>PRIMEX TRAINING & CONSULTANCY PVT. LTD.</h1>
+<h1>
+PRIMEX TRAINING & CONSULTANCY PVT. LTD.
+</h1>
 
-<p>JOB REGISTRATION PORTAL</p>
+<p>
+JOB REGISTRATION PORTAL
+</p>
 
 </div>
 
@@ -61,11 +95,41 @@ content="PRIMEX Job Registration Portal">
 
 <ul>
 
-<li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+<li>
 
-<li><a href="#"><i class="fa fa-user"></i> Careers</a></li>
+<a href="index.html">
 
-<li><a href="#"><i class="fa fa-phone"></i> Contact</a></li>
+<i class="fa-solid fa-house"></i>
+
+Home
+
+</a>
+
+</li>
+
+<li>
+
+<a href="careers.html">
+
+<i class="fa-solid fa-briefcase"></i>
+
+Careers
+
+</a>
+
+</li>
+
+<li>
+
+<a href="contact.html">
+
+<i class="fa-solid fa-address-book"></i>
+
+Contact
+
+</a>
+
+</li>
 
 </ul>
 
@@ -73,33 +137,74 @@ content="PRIMEX Job Registration Portal">
 
 </header>
 
-<!-- ================= HERO ================= -->
+<!-- ========================================= -->
+<!-- HERO -->
+<!-- ========================================= -->
 
 <section class="hero">
 
-<h2>Join Our Professional Team</h2>
+<h2>
+
+Build Your Career With PRIMEX
+
+</h2>
 
 <p>
 
-Fill in your details below to apply for current openings.
+Join India's growing manufacturing and engineering workforce.
+
+Apply today for exciting opportunities in
+
+Injection Moulding,
+
+Quality,
+
+Production,
+
+Design,
+
+Maintenance,
+
+IMDS,
+
+PPAP,
+
+CAD,
+
+and Engineering.
 
 </p>
 
+<a href="#jobForm" class="applyBtn">
+
+<i class="fa-solid fa-paper-plane"></i>
+
+Apply Now
+
+</a>
+
 </section>
 
-<!-- ================= MAIN FORM ================= -->
+<!-- ========================================= -->
+<!-- MAIN CONTAINER -->
+<!-- ========================================= -->
 
 <div class="container">
 
-<form id="jobForm" enctype="multipart/form-data">
+<form
+id="jobForm"
+autocomplete="off"
+enctype="multipart/form-data">
 
-<!-- ================= PERSONAL DETAILS ================= -->
+<!-- ========================================= -->
+<!-- PERSONAL DETAILS -->
+<!-- ========================================= -->
 
 <div class="card">
 
 <h2>
 
-<i class="fa fa-user-circle"></i>
+<i class="fa-solid fa-user"></i>
 
 Personal Details
 
@@ -109,74 +214,135 @@ Personal Details
 
 <div class="inputBox">
 
-<label>First Name *</label>
+<label>
+
+First Name <span>*</span>
+
+</label>
 
 <input
+
 type="text"
+
 id="fname"
+
 name="fname"
+
 placeholder="Enter First Name"
+
+maxlength="30"
+
 required>
 
 </div>
 
 <div class="inputBox">
 
-<label>Last Name *</label>
+<label>
+
+Last Name <span>*</span>
+
+</label>
 
 <input
+
 type="text"
+
 id="lname"
+
 name="lname"
+
 placeholder="Enter Last Name"
+
+maxlength="30"
+
 required>
 
 </div>
 
 <div class="inputBox">
 
-<label>Email Address *</label>
+<label>
+
+Email Address <span>*</span>
+
+</label>
 
 <input
+
 type="email"
+
 id="email"
+
 name="email"
-placeholder="Enter Email"
+
+placeholder="example@gmail.com"
+
 required>
 
 </div>
 
 <div class="inputBox">
 
-<label>Mobile Number *</label>
+<label>
+
+Mobile Number <span>*</span>
+
+</label>
 
 <input
+
 type="tel"
+
 id="mobile"
+
 name="mobile"
+
 maxlength="10"
+
+pattern="[0-9]{10}"
+
 placeholder="9876543210"
+
 required>
 
 </div>
 
 <div class="inputBox">
 
-<label>Date of Birth *</label>
+<label>
+
+Date of Birth <span>*</span>
+
+</label>
 
 <input
+
 type="date"
+
 id="dob"
+
 name="dob"
+
 required>
 
 </div>
 
 <div class="inputBox">
 
-<label>Gender *</label>
+<label>
 
-<select id="gender" name="gender" required>
+Gender <span>*</span>
+
+</label>
+
+<select
+
+id="gender"
+
+name="gender"
+
+required>
 
 <option value="">Select</option>
 
@@ -192,9 +358,17 @@ required>
 
 <div class="inputBox">
 
-<label>Marital Status</label>
+<label>
 
-<select id="marital" name="marital">
+Marital Status
+
+</label>
+
+<select
+
+id="marital"
+
+name="marital">
 
 <option>Single</option>
 
@@ -208,102 +382,172 @@ required>
 
 <div class="inputBox">
 
-<label>Nationality</label>
+<label>
+
+Nationality
+
+</label>
 
 <input
+
 type="text"
+
 id="nationality"
+
 name="nationality"
-value="Indian">
+
+value="Indian"
+
+readonly>
 
 </div>
 
 <div class="inputBox full">
 
-<label>Current Address *</label>
+<label>
+
+Current Address <span>*</span>
+
+</label>
 
 <textarea
-rows="3"
+
 id="address"
+
 name="address"
-placeholder="Complete Address"
+
+rows="4"
+
+placeholder="Enter Complete Address"
+
 required></textarea>
 
 </div>
 
 <div class="inputBox">
 
-<label>City *</label>
+<label>
+
+City <span>*</span>
+
+</label>
 
 <input
+
 type="text"
+
 id="city"
+
 name="city"
+
 required>
 
 </div>
 
 <div class="inputBox">
 
-<label>State *</label>
+<label>
+
+State <span>*</span>
+
+</label>
 
 <input
+
 type="text"
+
 id="state"
+
 name="state"
+
 required>
 
 </div>
 
 <div class="inputBox">
 
-<label for="pincode">Pincode *</label>
+<label>
+
+Pincode <span>*</span>
+
+</label>
 
 <input
+
 type="text"
+
 id="pincode"
+
 name="pincode"
-inputmode="numeric"
-pattern="[0-9]{6}"
+
 maxlength="6"
+
+pattern="[0-9]{6}"
+
 placeholder="560001"
+
 required>
 
 </div>
 
 <div class="inputBox">
 
-<label>Country *</label>
+<label>
+
+Country
+
+</label>
 
 <input
+
 type="text"
+
 id="country"
+
 name="country"
+
 value="India"
-required>
+
+readonly>
 
 </div>
 
 <div class="inputBox">
 
-<label>LinkedIn Profile</label>
+<label>
+
+LinkedIn Profile
+
+</label>
 
 <input
+
 type="url"
+
 id="linkedin"
+
 name="linkedin"
-placeholder="https://linkedin.com/in/yourprofile">
+
+placeholder="https://linkedin.com/in/yourname">
 
 </div>
 
 <div class="inputBox">
 
-<label>Portfolio Website</label>
+<label>
+
+Portfolio Website
+
+</label>
 
 <input
+
 type="url"
+
 id="portfolio"
+
 name="portfolio"
+
 placeholder="https://yourwebsite.com">
 
 </div>
@@ -312,379 +556,1014 @@ placeholder="https://yourwebsite.com">
 
 </div>
 
-<!-- ======= CONTINUE IN PART 2 ======= -->
- <!-- ================= EDUCATION DETAILS ================= -->
+<!-- ===== CONTINUE WITH PART 1B ===== -->
+ <!-- ===================================================== -->
+<!-- EDUCATION DETAILS -->
+<!-- PART 1B1 -->
+<!-- Continue after Personal Details -->
+<!-- ===================================================== -->
 
 <div class="card">
 
-<h2><i class="fa-solid fa-graduation-cap"></i> Education Details</h2>
+    <h2>
+        <i class="fa-solid fa-graduation-cap"></i>
+        Education Details
+    </h2>
 
-<div class="grid">
+    <div class="grid">
 
-<div class="inputBox">
-<label>Highest Qualification *</label>
-<select
-id="qualification"
-name="qualification">
-<option value="">Select Qualification</option>
-<option>SSLC</option>
-<option>PUC</option>
-<option>ITI</option>
-<option>Diploma</option>
-<option>B.Sc</option>
-<option>B.Com</option>
-<option>BCA</option>
-<option>B.E</option>
-<option>B.Tech</option>
-<option>MBA</option>
-<option>M.Tech</option>
-<option>Other</option>
-</select>
+        <div class="inputBox">
+            <label>
+                Highest Qualification
+                <span>*</span>
+            </label>
+
+            <select
+                id="qualification"
+                name="qualification"
+                required>
+
+                <option value="">Select Qualification</option>
+                <option>SSLC</option>
+                <option>PUC</option>
+                <option>ITI</option>
+                <option>Diploma</option>
+                <option>B.Sc</option>
+                <option>B.Com</option>
+                <option>BBA</option>
+                <option>BCA</option>
+                <option>B.E</option>
+                <option>B.Tech</option>
+                <option>M.Sc</option>
+                <option>M.Com</option>
+                <option>MBA</option>
+                <option>MCA</option>
+                <option>M.Tech</option>
+                <option>Ph.D</option>
+                <option>Other</option>
+
+            </select>
+
+        </div>
+
+        <div class="inputBox">
+
+            <label>
+                Branch / Specialization
+            </label>
+
+            <input
+                type="text"
+                id="branch"
+                name="branch"
+                maxlength="60"
+                placeholder="Mechanical Engineering">
+
+        </div>
+
+        <div class="inputBox">
+
+            <label>
+                College / University
+                <span>*</span>
+            </label>
+
+            <input
+                type="text"
+                id="college"
+                name="college"
+                maxlength="100"
+                placeholder="College / University Name"
+                required>
+
+        </div>
+
+        <div class="inputBox">
+
+            <label>
+                Passing Year
+                <span>*</span>
+            </label>
+
+            <input
+                type="number"
+                id="passingYear"
+                name="passingYear"
+                min="1990"
+                max="2035"
+                placeholder="2025"
+                required>
+
+        </div>
+
+        <div class="inputBox">
+
+            <label>
+                Percentage / CGPA
+                <span>*</span>
+            </label>
+
+            <input
+                type="number"
+                id="percentage"
+                name="percentage"
+                min="0"
+                max="100"
+                step="0.01"
+                placeholder="75.50"
+                required>
+
+        </div>
+
+        <div class="inputBox">
+
+            <label>
+                Backlogs
+            </label>
+
+            <select
+                id="backlogs"
+                name="backlogs">
+
+                <option>No</option>
+                <option>Yes</option>
+
+            </select>
+
+        </div>
+
+        <div class="inputBox full">
+
+            <label>
+                Certifications
+            </label>
+
+            <textarea
+                id="certifications"
+                name="certifications"
+                rows="3"
+                placeholder="Example: AutoCAD, CATIA V5, SolidWorks, Advanced Excel, Six Sigma, PPAP, IMDS, Core Tools"></textarea>
+
+        </div>
+
+    </div>
+
 </div>
 
-<div class="inputBox">
-<label>Specialization / Branch</label>
-<input
-id="branch"
-name="branch">
-</div>
-
-<div class="inputBox">
-<label>College / University *</label>
-<input
-id="college"
-name="college">
-</div>
-
-<div class="inputBox">
-<label>Passing Year *</label>
-<input
-id="passingYear"
-name="passingYear">
-</div>
-
-<div class="inputBox">
-<label>Percentage / CGPA *</label>
-<input
-id="percentage"
-name="percentage">
-</div>
-
-<div class="inputBox">
-<label>Backlogs</label>
-<select
-id="backlogs"
-name="backlogs">
-<option>No</option>
-<option>Yes</option>
-</select>
-</div>
-
-</div>
-
-</div>
-
-<!-- ================= EXPERIENCE ================= -->
+<!-- ===================================================== -->
+<!-- EXPERIENCE DETAILS -->
+<!-- ===================================================== -->
 
 <div class="card">
 
-<h2><i class="fa-solid fa-briefcase"></i> Experience</h2>
+    <h2>
+        <i class="fa-solid fa-briefcase"></i>
+        Experience Details
+    </h2>
 
-<div class="grid">
+    <div class="grid">
 
-<div class="inputBox">
-<label>Total Experience *</label>
-<select
-id="experience"
-name="experience">
-<option>Fresher</option>
-<option>6 Months</option>
-<option>1 Year</option>
-<option>2 Years</option>
-<option>3 Years</option>
-<option>4 Years</option>
-<option>5 Years</option>
-<option>6+ Years</option>
-</select>
+        <div class="inputBox">
+
+            <label>
+                Total Experience
+                <span>*</span>
+            </label>
+
+            <select
+                id="experience"
+                name="experience"
+                required>
+
+                <option value="">Select Experience</option>
+
+                <option>Fresher</option>
+
+                <option>6 Months</option>
+
+                <option>1 Year</option>
+
+                <option>2 Years</option>
+
+                <option>3 Years</option>
+
+                <option>4 Years</option>
+
+                <option>5 Years</option>
+
+                <option>6+ Years</option>
+
+            </select>
+
+        </div>
+
+        <div class="inputBox">
+
+            <label>
+                Current Company
+            </label>
+
+            <input
+                type="text"
+                id="company"
+                name="company"
+                maxlength="80"
+                placeholder="Company Name">
+
+        </div>
+
+        <div class="inputBox">
+
+            <label>
+                Current Designation
+            </label>
+
+            <input
+                type="text"
+                id="designation"
+                name="designation"
+                maxlength="60"
+                placeholder="Quality Engineer">
+
+        </div>
+
+<!-- ===== CONTINUE IN PART 1B2 ===== -->
+             <div class="inputBox">
+
+            <label>
+                Current CTC (LPA)
+            </label>
+
+            <input
+                type="number"
+                id="ctc"
+                name="ctc"
+                min="0"
+                step="0.01"
+                placeholder="3.50">
+
+        </div>
+
+        <div class="inputBox">
+
+            <label>
+                Expected CTC (LPA)
+            </label>
+
+            <input
+                type="number"
+                id="expected"
+                name="expected"
+                min="0"
+                step="0.01"
+                placeholder="5.00">
+
+        </div>
+
+        <div class="inputBox">
+
+            <label>
+                Notice Period
+            </label>
+
+            <select
+                id="notice"
+                name="notice">
+
+                <option>Immediate</option>
+                <option>15 Days</option>
+                <option>30 Days</option>
+                <option>45 Days</option>
+                <option>60 Days</option>
+                <option>90 Days</option>
+
+            </select>
+
+        </div>
+
+        <div class="inputBox">
+
+            <label>
+                Preferred Job Location
+            </label>
+
+            <select
+                id="location"
+                name="location">
+
+                <option>Bangalore</option>
+                <option>Hyderabad</option>
+                <option>Chennai</option>
+                <option>Pune</option>
+                <option>Hosur</option>
+                <option>Mysore</option>
+                <option>Anywhere in India</option>
+
+            </select>
+
+        </div>
+
+        <div class="inputBox">
+
+            <label>
+                Available to Join
+            </label>
+
+            <input
+                type="date"
+                id="joiningDate"
+                name="joiningDate">
+
+        </div>
+
+        <div class="inputBox">
+
+            <label>
+                Current Employment Status
+            </label>
+
+            <select
+                id="employment"
+                name="employment">
+
+                <option>Working</option>
+                <option>Serving Notice Period</option>
+                <option>Immediate Joiner</option>
+                <option>Fresher</option>
+
+            </select>
+
+        </div>
+
+        <div class="inputBox full">
+
+            <label>
+                Work Experience Summary
+            </label>
+
+            <textarea
+                id="summary"
+                name="summary"
+                rows="5"
+                maxlength="1000"
+                placeholder="Briefly describe your work experience, responsibilities, achievements, projects, PPAP, IMDS, Customer Handling, Quality Systems, etc."></textarea>
+
+        </div>
+
+    </div>
+
 </div>
 
-<div class="inputBox">
-<label>Current Company</label>
-<input
-id="company"
-name="company">
-</div>
+<!-- ===================================================== -->
+<!-- END OF EXPERIENCE SECTION -->
+<!-- NEXT: PART 2 (Skills, Upload Documents, Declaration,
+Buttons, Success Modal, Loading Screen) -->
+<!-- ===================================================== -->
 
-<div class="inputBox">
-<label>Current Designation</label>
-<input
-id="designation"
-name="designation">
-</div>
-
-<div class="inputBox">
-<label>Current CTC</label>
-<input
-id="ctc"
-name="ctc">
-</div>
-
-<div class="inputBox">
-<label>Expected CTC</label>
-<input
-id="expected"
-name="expected">
-</div>
-
-<div class="inputBox">
-<label>Notice Period</label>
-<select
-id="notice"
-name="notice">
-<option>Immediate</option>
-<option>15 Days</option>
-<option>30 Days</option>
-<option>60 Days</option>
-<option>90 Days</option>
-</select>
-</div>
-
-<div class="inputBox full">
-<label>Work Experience Summary</label>
-<div class="inputBox full">
-
-<label>Work Experience Summary</label>
-
-<textarea
-id="summary"
-name="summary"
-rows="5"
-placeholder="Describe your work experience..."></textarea>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- ================= SKILLS ================= -->
+ <!-- ===================================================== -->
+<!-- PART 2A -->
+<!-- SKILLS, PREFERRED DEPARTMENT & LANGUAGES -->
+<!-- ===================================================== -->
 
 <div class="card">
 
-<h2><i class="fa-solid fa-laptop-code"></i> Skills</h2>
+    <h2>
+        <i class="fa-solid fa-laptop-code"></i>
+        Technical Skills
+    </h2>
 
-<div class="skills">
+    <div class="skills">
 
-<label><input type="checkbox" value="HTML">HTML</label>
-<label><input type="checkbox" value="CSS">CSS</label>
-<label><input type="checkbox" value="JavaScript">JavaScript</label>
-<label><input type="checkbox" value="React">React</label>
-<label><input type="checkbox" value="Angular">Angular</label>
-<label><input type="checkbox" value="NodeJS">Node JS</label>
-<label><input type="checkbox" value="Python">Python</label>
-<label><input type="checkbox" value="Java">Java</label>
-<label><input type="checkbox" value="C">C</label>
-<label><input type="checkbox" value="C++">C++</label>
-<label><input type="checkbox" value="SQL">SQL</label>
-<label><input type="checkbox" value="Excel">Advanced Excel</label>
-<label><input type="checkbox" value="Power BI">Power BI</label>
-<label><input type="checkbox" value="AutoCAD">AutoCAD</label>
-<label><input type="checkbox" value="SolidWorks">SolidWorks</label>
-<label><input type="checkbox" value="CATIA">CATIA</label>
+        <label><input type="checkbox" value="Injection Moulding"> Injection Moulding</label>
+
+        <label><input type="checkbox" value="Quality"> Quality</label>
+
+        <label><input type="checkbox" value="Production"> Production</label>
+
+        <label><input type="checkbox" value="PPAP"> PPAP</label>
+
+        <label><input type="checkbox" value="IMDS"> IMDS</label>
+
+        <label><input type="checkbox" value="APQP"> APQP</label>
+
+        <label><input type="checkbox" value="FMEA"> FMEA</label>
+
+        <label><input type="checkbox" value="MSA"> MSA</label>
+
+        <label><input type="checkbox" value="SPC"> SPC</label>
+
+        <label><input type="checkbox" value="IATF 16949"> IATF 16949</label>
+
+        <label><input type="checkbox" value="ISO 9001"> ISO 9001</label>
+
+        <label><input type="checkbox" value="5S"> 5S</label>
+
+        <label><input type="checkbox" value="Kaizen"> Kaizen</label>
+
+        <label><input type="checkbox" value="AutoCAD"> AutoCAD</label>
+
+        <label><input type="checkbox" value="SolidWorks"> SolidWorks</label>
+
+        <label><input type="checkbox" value="CATIA"> CATIA V5</label>
+
+        <label><input type="checkbox" value="Creo"> Creo</label>
+
+        <label><input type="checkbox" value="UG NX"> UG NX</label>
+
+        <label><input type="checkbox" value="MS Office"> MS Office</label>
+
+        <label><input type="checkbox" value="Advanced Excel"> Advanced Excel</label>
+
+        <label><input type="checkbox" value="Power BI"> Power BI</label>
+
+        <label><input type="checkbox" value="SAP"> SAP</label>
+
+        <label><input type="checkbox" value="ERP"> ERP</label>
+
+        <label><input type="checkbox" value="HTML"> HTML</label>
+
+        <label><input type="checkbox" value="CSS"> CSS</label>
+
+        <label><input type="checkbox" value="JavaScript"> JavaScript</label>
+
+        <label><input type="checkbox" value="React"> React</label>
+
+        <label><input type="checkbox" value="Node JS"> Node JS</label>
+
+        <label><input type="checkbox" value="Python"> Python</label>
+
+        <label><input type="checkbox" value="Java"> Java</label>
+
+        <label><input type="checkbox" value="C"> C</label>
+
+        <label><input type="checkbox" value="C++"> C++</label>
+
+        <label><input type="checkbox" value="SQL"> SQL</label>
+
+    </div>
 
 </div>
 
-</div>
-
-<!-- ================= DOCUMENT UPLOAD ================= -->
+<!-- ===================================================== -->
+<!-- PREFERRED DEPARTMENT -->
+<!-- ===================================================== -->
 
 <div class="card">
 
-<h2><i class="fa-solid fa-cloud-arrow-up"></i> Upload Documents</h2>
+    <h2>
+        <i class="fa-solid fa-building"></i>
+        Preferred Department
+    </h2>
 
-<div class="grid">
+    <div class="grid">
 
-<div class="inputBox">
-<label>Passport Size Photo *</label>
-<input
-type="file"
-id="photo"
-name="photo">
+        <div class="inputBox">
+
+            <label>
+                Department Applying For
+                <span>*</span>
+            </label>
+
+            <select
+                id="department"
+                name="department"
+                required>
+
+                <option value="">Select Department</option>
+
+                <option>Injection Moulding</option>
+
+                <option>Production</option>
+
+                <option>Quality</option>
+
+                <option>Tool Room</option>
+
+                <option>Design</option>
+
+                <option>Maintenance</option>
+
+                <option>Projects</option>
+
+                <option>Purchase</option>
+
+                <option>Stores</option>
+
+                <option>Planning</option>
+
+                <option>Logistics</option>
+
+                <option>HR</option>
+
+                <option>Finance</option>
+
+                <option>IT</option>
+
+                <option>Administration</option>
+
+            </select>
+
+        </div>
+
+        <div class="inputBox">
+
+            <label>
+                Preferred Shift
+            </label>
+
+            <select
+                id="shift"
+                name="shift">
+
+                <option>General Shift</option>
+
+                <option>Morning Shift</option>
+
+                <option>Evening Shift</option>
+
+                <option>Night Shift</option>
+
+                <option>Rotational Shift</option>
+
+            </select>
+
+        </div>
+
+    </div>
+
 </div>
 
-<div class="inputBox">
-<label>Resume *</label>
-<input
-type="file"
-id="resume"
-name="resume">
-</div>
-
-<div class="inputBox">
-<label>Aadhaar Card</label>
-<input
-type="file"
-id="Aadhar Card"
-name="Aadhar Card">
-</div>
-
-<div class="inputBox">
-<label>PAN Card</label>
-<input
-type="file"
-id="Pan Card"
-name="Pan Card">
-</div>
-
-</div>
-
-</div>
-
-<!-- ================= DECLARATION ================= -->
+<!-- ===================================================== -->
+<!-- LANGUAGES KNOWN -->
+<!-- ===================================================== -->
 
 <div class="card">
 
-<h2><i class="fa-solid fa-circle-check"></i> Declaration</h2>
+    <h2>
+        <i class="fa-solid fa-language"></i>
+        Languages Known
+    </h2>
 
-<label class="agree">
+    <div class="skills">
 
-<input type="checkbox" id="agree" required>
+        <label><input type="checkbox" value="Kannada"> Kannada</label>
 
-I hereby declare that all the information furnished above is true and correct to the best of my knowledge. I understand that any false information may lead to rejection of my application.
+        <label><input type="checkbox" value="English"> English</label>
 
-</label>
+        <label><input type="checkbox" value="Hindi"> Hindi</label>
+
+        <label><input type="checkbox" value="Telugu"> Telugu</label>
+
+        <label><input type="checkbox" value="Tamil"> Tamil</label>
+
+        <label><input type="checkbox" value="Malayalam"> Malayalam</label>
+
+        <label><input type="checkbox" value="Marathi"> Marathi</label>
+
+        <label><input type="checkbox" value="Urdu"> Urdu</label>
+
+        <label><input type="checkbox" value="Other"> Other</label>
+
+    </div>
 
 </div>
 
-<!-- ================= BUTTONS ================= -->
+<!-- ===================================================== -->
+<!-- CONTINUE WITH PART 2B -->
+<!-- ===================================================== -->
+
+ <!-- ===================================================== -->
+<!-- PART 2B -->
+<!-- DOCUMENT UPLOAD -->
+<!-- ===================================================== -->
+
+<div class="card">
+
+    <h2>
+        <i class="fa-solid fa-cloud-arrow-up"></i>
+        Upload Documents
+    </h2>
+
+    <div class="grid">
+
+        <div class="inputBox">
+
+            <label>
+                Passport Size Photo
+                <span>*</span>
+            </label>
+
+            <input
+                type="file"
+                id="photo"
+                name="photo"
+                accept=".jpg,.jpeg,.png"
+                required>
+
+            <small>
+                JPG / JPEG / PNG (Maximum 2 MB)
+            </small>
+
+        </div>
+
+        <div class="inputBox">
+
+            <label>
+                Resume / CV
+                <span>*</span>
+            </label>
+
+            <input
+                type="file"
+                id="resume"
+                name="resume"
+                accept=".pdf,.doc,.docx"
+                required>
+
+            <small>
+                PDF / DOC / DOCX (Maximum 5 MB)
+            </small>
+
+        </div>
+
+        <div class="inputBox">
+
+            <label>
+                Aadhaar Card
+            </label>
+
+            <input
+                type="file"
+                id="aadhaar"
+                name="aadhaar"
+                accept=".pdf,.jpg,.jpeg,.png">
+
+            <small>
+                PDF / JPG / PNG (Optional)
+            </small>
+
+        </div>
+
+        <div class="inputBox">
+
+            <label>
+                PAN Card
+            </label>
+
+            <input
+                type="file"
+                id="pan"
+                name="pan"
+                accept=".pdf,.jpg,.jpeg,.png">
+
+            <small>
+                PDF / JPG / PNG (Optional)
+            </small>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ===================================================== -->
+<!-- DECLARATION -->
+<!-- ===================================================== -->
+
+<div class="card">
+
+    <h2>
+
+        <i class="fa-solid fa-circle-check"></i>
+
+        Declaration
+
+    </h2>
+
+    <label class="agree">
+
+        <input
+            type="checkbox"
+            id="agree"
+            required>
+
+        I hereby declare that all the information provided in this
+        application is true and correct to the best of my knowledge.
+        I understand that if any information is found to be false,
+        PRIMEX TRAINING & CONSULTANCY PVT. LTD. reserves the right to
+        reject my application at any stage of the recruitment process.
+
+    </label>
+
+</div>
+
+<!-- ===================================================== -->
+<!-- ACTION BUTTONS -->
+<!-- ===================================================== -->
 
 <div class="buttons">
 
-<button type="submit" class="submitBtn">
+    <button
+        type="submit"
+        class="submitBtn">
 
-<i class="fa-solid fa-paper-plane"></i>
+        <i class="fa-solid fa-paper-plane"></i>
 
-Submit Application
+        Submit Application
 
-</button>
+    </button>
 
-<button type="reset" class="resetBtn">
+    <button
+        type="reset"
+        class="resetBtn">
 
-<i class="fa-solid fa-rotate-left"></i>
+        <i class="fa-solid fa-rotate-left"></i>
 
-Reset
+        Reset Form
 
-</button>
+    </button>
 
 </div>
-<!-- ================= SUCCESS MODAL ================= -->
+
+<!-- ===================================================== -->
+<!-- END OF FORM -->
+<!-- ===================================================== -->
+
+</form>
+
+</div>
+
+<!-- ===================================================== -->
+<!-- CONTINUE WITH PART 2C -->
+<!-- Success Modal -->
+<!-- Loading Screen -->
+<!-- Footer -->
+<!-- Closing Tags -->
+<!-- ===================================================== -->
+
+ <!-- ===================================================== -->
+<!-- PART 2C -->
+<!-- SUCCESS MODAL -->
+<!-- ===================================================== -->
 
 <div id="successModal" class="modal">
 
     <div class="modal-content">
 
         <div class="success-icon">
+
             <i class="fa-solid fa-circle-check"></i>
+
         </div>
 
-        <h2>Application Submitted Successfully</h2>
+        <h2>
+            Application Submitted Successfully
+        </h2>
 
         <p>
+
             Thank you for registering with
-            <strong>PRIMEX TRAINING & CONSULTANCY PVT. LTD.</strong>
+
+            <strong>
+
+                PRIMEX TRAINING & CONSULTANCY PVT. LTD.
+
+            </strong>
+
         </p>
 
         <p>
-            Your application has been received successfully.
+
+            Your application has been successfully submitted.
+
+            Our recruitment team will review your profile and
+
+            contact you if your profile matches the current openings.
+
         </p>
 
-        <button id="closeModal" class="closeBtn">
-            Close
-        </button>
+        <div class="success-buttons">
+
+            <button
+                id="closeModal"
+                class="closeBtn">
+
+                Close
+
+            </button>
+
+        </div>
 
     </div>
 
 </div>
 
-<!-- ================= LOADING ================= -->
+<!-- ===================================================== -->
+<!-- LOADING SCREEN -->
+<!-- ===================================================== -->
 
 <div id="loading" class="loading">
 
-    <div class="loader"></div>
+    <div class="loading-box">
 
-    <h3>Uploading Application...</h3>
+        <div class="loader"></div>
 
-    <p>Please wait...</p>
+        <h3>
+
+            Uploading Your Application...
+
+        </h3>
+
+        <p>
+
+            Please wait while we upload your documents,
+
+            save your details to our database,
+
+            and notify the HR team.
+
+        </p>
+
+    </div>
 
 </div>
 
-</form>
-
-</div>
-
-<!-- ================= FOOTER ================= -->
+<!-- ===================================================== -->
+<!-- FOOTER -->
+<!-- ===================================================== -->
 
 <footer>
 
-<div class="footer-container">
+    <div class="footer-container">
 
-<div class="footer-logo">
+        <div class="footer-col">
 
-<img src="logo.png" alt="Primex">
+            <img
+                src="logo.png"
+                alt="PRIMEX Logo"
+                class="footer-logo">
 
-<h3>PRIMEX TRAINING & CONSULTANCY PVT. LTD.</h3>
+            <h3>
 
-</div>
+                PRIMEX TRAINING & CONSULTANCY PVT. LTD.
 
-<div class="footer-contact">
+            </h3>
 
-<p>
+            <p>
 
-<i class="fa-solid fa-phone"></i>
+                Building Careers...
 
-+91 7090643688
+                Creating Opportunities...
 
-</p>
+            </p>
 
-<p>
+        </div>
 
-<i class="fa-solid fa-envelope"></i>
+        <div class="footer-col">
 
-manjunathballari@yahoo.com
+            <h3>
 
-</p>
+                Quick Links
 
-<p>
+            </h3>
 
-<i class="fa-solid fa-location-dot"></i>
+            <ul>
 
-India
+                <li>
 
-</p>
+                    <a href="index.html">
 
-</div>
+                        Home
 
-<div class="footer-copy">
+                    </a>
 
-© 2026 PRIMEX Training & Consultancy Pvt. Ltd.
+                </li>
 
-<br>
+                <li>
 
-All Rights Reserved.
+                    <a href="careers.html">
 
-</div>
+                        Careers
 
-</div>
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="contact.html">
+
+                        Contact
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class="footer-col">
+
+            <h3>
+
+                Contact Us
+
+            </h3>
+
+            <p>
+
+                <i class="fa-solid fa-user"></i>
+
+                Manjunath Ballari
+
+            </p>
+
+            <p>
+
+                <i class="fa-solid fa-phone"></i>
+
+                +91 7090643688
+
+            </p>
+
+            <p>
+
+                <i class="fa-solid fa-envelope"></i>
+
+                manjunathballari@yahoo.com
+
+            </p>
+
+            <p>
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                Karnataka, India
+
+            </p>
+
+        </div>
+
+        <div class="footer-col">
+
+            <h3>
+
+                Follow Us
+
+            </h3>
+
+            <div class="social-icons">
+
+                <a href="#">
+
+                    <i class="fab fa-facebook"></i>
+
+                </a>
+
+                <a href="#">
+
+                    <i class="fab fa-instagram"></i>
+
+                </a>
+
+                <a href="#">
+
+                    <i class="fab fa-linkedin"></i>
+
+                </a>
+
+                <a href="https://wa.me/917090643688">
+
+                    <i class="fab fa-whatsapp"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+
+        © 2026 PRIMEX TRAINING & CONSULTANCY PVT. LTD.
+
+        All Rights Reserved.
+
+    </div>
 
 </footer>
 
 </div>
 
-<!-- ================= JAVASCRIPT ================= -->
+<!-- ===================================================== -->
+<!-- JAVASCRIPT -->
+<!-- ===================================================== -->
 
 <script src="script.js"></script>
-
 
 </body>
 
 </html>
+
