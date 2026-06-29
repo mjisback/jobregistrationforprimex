@@ -339,13 +339,15 @@ showLoading();
 // Files
 // -----------------------------
 
-const photo=document.getElementById("photo").files[0]||null;
+const photoInput = document.getElementById("photo");
+const resumeInput = document.getElementById("resume");
+const aadhaarInput = document.getElementById("aadhaar");
+const panInput = document.getElementById("pan");
 
-const resume=document.getElementById("resume").files[0]||null;
-
-const aadhaar=document.getElementById("aadhaar").files[0]||null;
-
-const pan=document.getElementById("pan").files[0]||null;
+const photo = photoInput ? photoInput.files[0] : null;
+const resume = resumeInput ? resumeInput.files[0] : null;
+const aadhaar = aadhaarInput ? aadhaarInput.files[0] : null;
+const pan = panInput ? panInput.files[0] : null;
 
 
 // -----------------------------
