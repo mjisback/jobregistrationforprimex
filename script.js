@@ -332,7 +332,6 @@ async function sendToGoogle(){
 
 try{
 
-showLoading();
 
 
 // -----------------------------
@@ -344,10 +343,10 @@ const resumeInput = document.getElementById("resume");
 const aadhaarInput = document.getElementById("aadhaar");
 const panInput = document.getElementById("pan");
 
-const photo = photoInput ? photoInput.files[0] : null;
-const resume = resumeInput ? resumeInput.files[0] : null;
-const aadhaar = aadhaarInput ? aadhaarInput.files[0] : null;
-const pan = panInput ? panInput.files[0] : null;
+const photo = photoInput?.files?.length ? photoInput.files[0] : null;
+const resume = resumeInput?.files?.length ? resumeInput.files[0] : null;
+const aadhaar = aadhaarInput?.files?.length ? aadhaarInput.files[0] : null;
+const pan = panInput?.files?.length ? panInput.files[0] : null;
 
 
 // -----------------------------
