@@ -284,7 +284,7 @@ function hideLoading() {
 
 // Your Google Apps Script Web App URL
 const SCRIPT_URL =
-"https://script.google.com/macros/s/AKfycbwPsZdwqPx2L-OCjnpK9HPZMwP8FHZsVBwpWzU4AeZbiIpkfeXqFDo03RbZnVbx2I0/exec";
+"https://script.google.com/macros/s/1yhnm1uM6ejxRpoyO60Yiovsm02qOknncTU9ZNJyHcbNnr855rgmHJ2qw/exec";
 
 
 // =======================================
