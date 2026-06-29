@@ -1,125 +1,153 @@
 // =======================================
 // PRIMEX JOB PORTAL
-// script.js (Part 1)
+// script.js - PART 1 (FIXED)
+// Initialization, Validation & Submit
+// =======================================
+
+// Global Variables
+let form;
+let loading;
+let submitBtn;
+let successModal;
+
+// =======================================
+// DOM Ready
 // =======================================
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const form = document.getElementById("jobForm");
-    const loading = document.getElementById("loading");
-    const submitBtn = document.querySelector(".submitBtn");
+    form = document.getElementById("jobForm");
+    loading = document.getElementById("loading");
+    submitBtn = document.querySelector(".submitBtn");
+    successModal = document.getElementById("successModal");
 
     // =======================================
-    // Background Image Slider
+    // Background Slider
     // =======================================
 
     const slides = document.querySelectorAll(".slide");
 
-    let current = 0;
+    if (slides.length > 0) {
 
-    function backgroundSlider() {
-
-        slides[current].classList.remove("active");
-
-        current++;
-
-        if (current >= slides.length) {
-            current = 0;
-        }
+        let current = 0;
 
         slides[current].classList.add("active");
 
+        setInterval(() => {
+
+            slides[current].classList.remove("active");
+
+            current++;
+
+            if (current >= slides.length) {
+                current = 0;
+            }
+
+            slides[current].classList.add("active");
+
+        }, 3000);
+
     }
 
-    setInterval(backgroundSlider,3000);
-
     // =======================================
-    // Input Restrictions
+    // LETTERS ONLY
     // =======================================
 
-    function lettersOnly(input){
+    function lettersOnly(id) {
 
-        input.addEventListener("input",function(){
+        const input = document.getElementById(id);
 
-            this.value=this.value.replace(/[^A-Za-z ]/g,'');
+        if (!input) return;
+
+        input.addEventListener("input", function () {
+
+            this.value = this.value.replace(/[^A-Za-z ]/g, "");
 
         });
 
     }
 
-    lettersOnly(document.getElementById("fname"));
-    lettersOnly(document.getElementById("lname"));
-    lettersOnly(document.getElementById("city"));
-    lettersOnly(document.getElementById("state"));
-    lettersOnly(document.getElementById("country"));
+    lettersOnly("fname");
+    lettersOnly("lname");
+    lettersOnly("city");
+    lettersOnly("state");
+    lettersOnly("country");
 
     // =======================================
-    // Mobile Number
+    // MOBILE
     // =======================================
 
-    const mobile=document.getElementById("mobile");
+    const mobile = document.getElementById("mobile");
 
-    mobile.addEventListener("input",function(){
+    if (mobile) {
 
-        this.value=this.value.replace(/\D/g,'');
+        mobile.addEventListener("input", function () {
 
-        if(this.value.length>10){
+            this.value = this.value.replace(/\D/g, "");
 
-            this.value=this.value.slice(0,10);
+            if (this.value.length > 10) {
 
-        }
+                this.value = this.value.slice(0, 10);
 
-    });
+            }
 
-    // =======================================
-    // Pincode
-    // =======================================
+        });
 
-    const pincode=document.getElementById("pincode");
-
-    pincode.addEventListener("input",function(){
-
-        this.value=this.value.replace(/\D/g,'');
-
-        if(this.value.length>6){
-
-            this.value=this.value.slice(0,6);
-
-        }
-
-    });
+    }
 
     // =======================================
-    // Email Validation
+    // PINCODE
     // =======================================
 
-    function validEmail(email){
+    const pincode = document.getElementById("pincode");
+
+    if (pincode) {
+
+        pincode.addEventListener("input", function () {
+
+            this.value = this.value.replace(/\D/g, "");
+
+            if (this.value.length > 6) {
+
+                this.value = this.value.slice(0, 6);
+
+            }
+
+        });
+
+    }
+
+    // =======================================
+    // EMAIL VALIDATION
+    // =======================================
+
+    function validEmail(email) {
 
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
     }
 
     // =======================================
-    // File Validation
+    // FILE VALIDATION
     // =======================================
 
-    function validateFile(fileInput,maxSizeMB){
+    function validateFile(fileInput, maxSizeMB) {
 
-        if(fileInput.files.length===0){
+        if (!fileInput || fileInput.files.length === 0) {
 
             return true;
 
         }
 
-        const file=fileInput.files[0];
+        const file = fileInput.files[0];
 
-        const max=maxSizeMB*1024*1024;
+        const max = maxSizeMB * 1024 * 1024;
 
-        if(file.size>max){
+        if (file.size > max) {
 
-            alert(file.name+" exceeds "+maxSizeMB+" MB");
+            alert(file.name + " exceeds " + maxSizeMB + " MB");
 
-            fileInput.value="";
+            fileInput.value = "";
 
             return false;
 
@@ -130,113 +158,164 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // =======================================
-    // Submit Validation
+    // SUBMIT FORM
     // =======================================
 
-    form.addEventListener("submit",function(e){
+    form.addEventListener("submit", async function (e) {
 
         e.preventDefault();
 
-        const fname=document.getElementById("fname").value.trim();
-        const lname=document.getElementById("lname").value.trim();
-        const email=document.getElementById("email").value.trim();
-        const mobile=document.getElementById("mobile").value.trim();
-        const address=document.getElementById("address").value.trim();
+        const fname = document.getElementById("fname").value.trim();
+        const lname = document.getElementById("lname").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const mobileNo = document.getElementById("mobile").value.trim();
+        const address = document.getElementById("address").value.trim();
 
-        if(fname===""){
+        if (fname === "") {
 
-            alert("Enter First Name");
-
-            return;
-
-        }
-
-        if(lname===""){
-
-            alert("Enter Last Name");
+            alert("Please enter First Name");
 
             return;
 
         }
 
-        if(!validEmail(email)){
+        if (lname === "") {
 
-            alert("Enter Valid Email");
-
-            return;
-
-        }
-
-        if(mobile.length!==10){
-
-            alert("Enter Valid Mobile Number");
+            alert("Please enter Last Name");
 
             return;
 
         }
 
-        if(address===""){
+        if (!validEmail(email)) {
 
-            alert("Enter Address");
+            alert("Please enter a valid Email Address");
 
             return;
 
         }
 
-        // File Checks
+        if (mobileNo.length !== 10) {
 
-        if(!validateFile(document.getElementById("photo"),2)) return;
+            alert("Please enter a valid 10 digit Mobile Number");
 
-        if(!validateFile(document.getElementById("resume"),5)) return;
+            return;
 
-        if(!validateFile(document.getElementById("aadhaar"),5)) return;
+        }
 
-        if(!validateFile(document.getElementById("pan"),5)) return;
+        if (address === "") {
 
-        // Show Loader
+            alert("Please enter Address");
 
-        loading.style.display="flex";
+            return;
 
-        submitBtn.disabled=true;
+        }
 
-        submitBtn.innerHTML="<i class='fa fa-spinner fa-spin'></i> Submitting...";
+        if (!validateFile(document.getElementById("photo"), 2)) return;
+        if (!validateFile(document.getElementById("resume"), 5)) return;
+        if (!validateFile(document.getElementById("aadhaar"), 5)) return;
+        if (!validateFile(document.getElementById("pan"), 5)) return;
 
-        // Next Part will upload to Google Apps Script
+        showLoading();
 
-        sendToGoogle();
+        try {
+
+            await sendToGoogle();
+
+        } catch (err) {
+
+            hideLoading();
+
+            console.error(err);
+
+            alert("Unable to submit application.");
+
+        }
 
     });
 
 });
+
 // =======================================
-// PART 2
-// Google Sheets + Drive Upload
+// Loading Helpers
 // =======================================
 
-// Replace with your deployed Apps Script Web App URL
+function showLoading() {
+
+    if (loading) {
+
+        loading.style.display = "flex";
+
+    }
+
+    if (submitBtn) {
+
+        submitBtn.disabled = true;
+
+        submitBtn.innerHTML =
+            '<i class="fa fa-spinner fa-spin"></i> Submitting...';
+
+    }
+
+}
+
+function hideLoading() {
+
+    if (loading) {
+
+        loading.style.display = "none";
+
+    }
+
+    if (submitBtn) {
+
+        submitBtn.disabled = false;
+
+        submitBtn.innerHTML =
+            '<i class="fa-solid fa-paper-plane"></i> Submit Application';
+
+    }
+
+}
+// =======================================
+// PART 2A (FIXED)
+// Google Apps Script Integration
+// =======================================
+
+// Your Google Apps Script Web App URL
 const SCRIPT_URL =
 "https://script.google.com/macros/s/AKfycbwPsZdwqPx2L-OCjnpK9HPZMwP8FHZsVBwpWzU4AeZbiIpkfeXqFDo03RbZnVbx2I0/exec";
 
 
-// Convert File to Base64
+// =======================================
+// Convert File To Base64
+// =======================================
+
 async function fileToBase64(file){
 
     return new Promise((resolve,reject)=>{
 
         if(!file){
+
             resolve("");
+
             return;
+
         }
 
         const reader=new FileReader();
 
-        reader.onload=()=>{
+        reader.onload=function(){
 
             resolve(reader.result.split(",")[1]);
 
         };
 
-        reader.onerror=error=>reject(error);
+        reader.onerror=function(error){
+
+            reject(error);
+
+        };
 
         reader.readAsDataURL(file);
 
@@ -245,48 +324,58 @@ async function fileToBase64(file){
 }
 
 
-
 // =======================================
-// Send Data to Google Apps Script
+// Send To Google Apps Script
 // =======================================
 
 async function sendToGoogle(){
 
 try{
 
+showLoading();
+
+
+// -----------------------------
 // Files
+// -----------------------------
 
-const photo=document.getElementById("photo").files[0];
+const photo=document.getElementById("photo").files[0]||null;
 
-const resume=document.getElementById("resume").files[0];
+const resume=document.getElementById("resume").files[0]||null;
 
-const aadhaar=document.getElementById("aadhaar").files[0];
+const aadhaar=document.getElementById("aadhaar").files[0]||null;
 
-const pan=document.getElementById("pan").files[0];
+const pan=document.getElementById("pan").files[0]||null;
 
 
+// -----------------------------
 // Skills
+// -----------------------------
 
-let skills=[];
+const skills=[];
 
-document.querySelectorAll(".skills input:checked").forEach(skill=>{
+document
+.querySelectorAll(".skills input:checked")
+.forEach(skill=>{
 
 skills.push(skill.value);
 
 });
 
 
-// Create Payload
+// -----------------------------
+// Payload
+// -----------------------------
 
 const payload={
 
-firstName:document.getElementById("fname").value,
+firstName:document.getElementById("fname").value.trim(),
 
-lastName:document.getElementById("lname").value,
+lastName:document.getElementById("lname").value.trim(),
 
-email:document.getElementById("email").value,
+email:document.getElementById("email").value.trim(),
 
-mobile:document.getElementById("mobile").value,
+mobile:document.getElementById("mobile").value.trim(),
 
 dob:document.getElementById("dob").value,
 
@@ -294,47 +383,47 @@ gender:document.getElementById("gender").value,
 
 marital:document.getElementById("marital").value,
 
-nationality:document.getElementById("nationality").value,
+nationality:document.getElementById("nationality").value.trim(),
 
-address:document.getElementById("address").value,
+address:document.getElementById("address").value.trim(),
 
-city:document.getElementById("city").value,
+city:document.getElementById("city").value.trim(),
 
-state:document.getElementById("state").value,
+state:document.getElementById("state").value.trim(),
 
-pincode:document.getElementById("pincode").value,
+pincode:document.getElementById("pincode").value.trim(),
 
-country:document.getElementById("country").value,
+country:document.getElementById("country").value.trim(),
 
-linkedin:document.getElementById("linkedin").value,
+linkedin:document.getElementById("linkedin").value.trim(),
 
-portfolio:document.getElementById("portfolio").value,
+portfolio:document.getElementById("portfolio").value.trim(),
 
 qualification:document.getElementById("qualification").value,
 
-branch:document.getElementById("branch").value,
+branch:document.getElementById("branch").value.trim(),
 
-college:document.getElementById("college").value,
+college:document.getElementById("college").value.trim(),
 
-passingYear:document.getElementById("passingYear").value,
+passingYear:document.getElementById("passingYear").value.trim(),
 
-percentage:document.getElementById("percentage").value,
+percentage:document.getElementById("percentage").value.trim(),
 
 backlogs:document.getElementById("backlogs").value,
 
 experience:document.getElementById("experience").value,
 
-company:document.getElementById("company").value,
+company:document.getElementById("company").value.trim(),
 
-designation:document.getElementById("designation").value,
+designation:document.getElementById("designation").value.trim(),
 
-currentCTC:document.getElementById("ctc").value,
+currentCTC:document.getElementById("ctc").value.trim(),
 
-expectedCTC:document.getElementById("expected").value,
+expectedCTC:document.getElementById("expected").value.trim(),
 
 notice:document.getElementById("notice").value,
 
-summary:document.getElementById("summary").value,
+summary:document.getElementById("summary").value.trim(),
 
 skills:skills.join(", "),
 
@@ -357,126 +446,168 @@ panData:await fileToBase64(pan)
 };
 
 
-// Send
+// Debug (remove later if you wish)
+console.log(payload);
 
-const response=await fetch(SCRIPT_URL,{
+// =======================================
+// Continue in Part 2B
+// =======================================
+    // =======================================
+// PART 2B (FIXED)
+// Send Request & Handle Response
+// =======================================
 
-method:"POST",
+// Send to Google Apps Script
+const response = await fetch(SCRIPT_URL, {
 
-headers:{
+    method: "POST",
 
-"Content-Type":"application/json"
+    headers: {
 
-},
+        "Accept": "application/json",
 
-body:JSON.stringify(payload)
+        "Content-Type": "application/json"
+
+    },
+
+    body: JSON.stringify(payload)
 
 });
 
 
-const result=await response.json();
+// Check HTTP Status
+if (!response.ok) {
+
+    hideLoading();
+
+    alert("Server Error : " + response.status);
+
+    return;
+
+}
+
+
+// Read Response
+const text = await response.text();
+
+console.log("Server Response :", text);
+
+
+// Convert to JSON
+let result;
+
+try {
+
+    result = JSON.parse(text);
+
+}
+catch (err) {
+
+    hideLoading();
+
+    alert("Invalid response received from Google Apps Script.\n\n" + text);
+
+    console.error(err);
+
+    return;
+
+}
 
 
 // Success
+if (result.status === "success") {
 
-if(result.status==="success"){
+    hideLoading();
 
-loading.style.display="none";
+    if (successModal) {
 
-submitBtn.disabled=false;
+        successModal.style.display = "flex";
 
-submitBtn.innerHTML='<i class="fa-solid fa-paper-plane"></i> Submit Application';
+    }
 
-document.getElementById("successModal").style.display="flex";
+    if (form) {
 
-form.reset();
+        form.reset();
 
-}
+    }
 
+    console.log("Application ID :", result.applicationID);
 
-// Error
-
-else{
-
-loading.style.display="none";
-
-submitBtn.disabled=false;
-
-submitBtn.innerHTML='<i class="fa-solid fa-paper-plane"></i> Submit Application';
-
-alert(result.message);
+    return;
 
 }
 
 
-}catch(error){
+// Server Returned Error
+hideLoading();
 
-console.error(error);
+alert(result.message || "Application could not be submitted.");
 
-loading.style.display="none";
+}
+catch (error) {
 
-submitBtn.disabled=false;
+    console.error(error);
 
-submitBtn.innerHTML='<i class="fa-solid fa-paper-plane"></i> Submit Application';
+    hideLoading();
 
-alert("Unable to connect to server.");
+    alert("Unable to connect to Google Apps Script.\n\n" + error.message);
 
 }
 
 }
 // =======================================
-// PART 3
+// PART 3 (FINAL FIXED)
 // Success Modal, Reset, Utilities
 // =======================================
 
-// Hide Loading
-function hideLoading() {
+// Wait until page is fully loaded
+window.addEventListener("load", function () {
 
-    loading.style.display = "none";
+    // Fade Animation
+    document.body.style.opacity = "0";
 
-    submitBtn.disabled = false;
+    setTimeout(() => {
 
-    submitBtn.innerHTML =
-    '<i class="fa-solid fa-paper-plane"></i> Submit Application';
+        document.body.style.transition = "opacity 0.8s";
 
-}
+        document.body.style.opacity = "1";
 
-// Show Loading
-function showLoading() {
+    }, 100);
 
-    loading.style.display = "flex";
-
-    submitBtn.disabled = true;
-
-    submitBtn.innerHTML =
-    '<i class="fa fa-spinner fa-spin"></i> Uploading...';
-
-}
+});
 
 
 // =======================================
 // Success Modal
 // =======================================
 
-const successModal = document.getElementById("successModal");
+document.addEventListener("DOMContentLoaded", function () {
 
-const closeModal = document.getElementById("closeModal");
+    const closeModal = document.getElementById("closeModal");
 
+    if (closeModal) {
 
-closeModal.addEventListener("click", function () {
+        closeModal.addEventListener("click", function () {
 
-    successModal.style.display = "none";
+            if (successModal) {
 
-});
+                successModal.style.display = "none";
 
+            }
 
-window.addEventListener("click", function (e) {
-
-    if (e.target == successModal) {
-
-        successModal.style.display = "none";
+        });
 
     }
+
+    window.addEventListener("click", function (e) {
+
+        if (successModal && e.target === successModal) {
+
+            successModal.style.display = "none";
+
+        }
+
+    });
 
 });
 
@@ -485,19 +616,23 @@ window.addEventListener("click", function (e) {
 // Reset Button
 // =======================================
 
-document.querySelector(".resetBtn")
-.addEventListener("click", function () {
+document.addEventListener("DOMContentLoaded", function () {
 
-setTimeout(() => {
+    const resetBtn = document.querySelector(".resetBtn");
 
-loading.style.display = "none";
+    if (resetBtn) {
 
-submitBtn.disabled = false;
+        resetBtn.addEventListener("click", function () {
 
-submitBtn.innerHTML =
-'<i class="fa-solid fa-paper-plane"></i> Submit Application';
+            setTimeout(() => {
 
-}, 200);
+                hideLoading();
+
+            }, 200);
+
+        });
+
+    }
 
 });
 
@@ -506,91 +641,80 @@ submitBtn.innerHTML =
 // File Preview
 // =======================================
 
-document.querySelectorAll("input[type=file]")
+document.querySelectorAll("input[type='file']").forEach(input => {
 
-.forEach(file => {
+    input.addEventListener("change", function () {
 
-file.addEventListener("change", function () {
+        if (this.files.length > 0) {
 
-if (this.files.length > 0) {
+            console.log("Selected File :", this.files[0].name);
 
-console.log("Selected :", this.files[0].name);
+        }
 
-}
-
-});
+    });
 
 });
 
 
 // =======================================
-// Fade Animation
+// Scroll To Top
 // =======================================
 
-window.onload = function () {
+function scrollTopSmooth() {
 
-document.body.style.opacity = "0";
+    window.scrollTo({
 
-setTimeout(() => {
+        top: 0,
 
-document.body.style.transition = "opacity .8s";
+        behavior: "smooth"
 
-document.body.style.opacity = "1";
-
-},100);
-
-};
-
-
-// =======================================
-// Auto Scroll
-// =======================================
-
-function scrollTopSmooth(){
-
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
-
-});
+    });
 
 }
 
 
 // =======================================
-// Form Submitted
+// Application Success
 // =======================================
 
-function applicationSuccess(){
+function applicationSuccess() {
 
-hideLoading();
+    hideLoading();
 
-scrollTopSmooth();
+    scrollTopSmooth();
 
-successModal.style.display="flex";
+    if (successModal) {
 
-form.reset();
+        successModal.style.display = "flex";
+
+    }
+
+    if (form) {
+
+        form.reset();
+
+    }
 
 }
 
 
 // =======================================
-// Network Error
+// Application Error
 // =======================================
 
-function applicationError(msg){
+function applicationError(message) {
 
-hideLoading();
+    hideLoading();
 
-alert(msg);
+    alert(message);
 
 }
 
 
 // =======================================
-// Console
+// Console Message
 // =======================================
 
-console.log("PRIMEX Job Portal Loaded Successfully");
+console.log("======================================");
+console.log(" PRIMEX JOB PORTAL LOADED SUCCESSFULLY ");
+console.log("======================================");
