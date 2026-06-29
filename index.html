@@ -213,6 +213,7 @@ required>
 <input
 type="text"
 id="nationality"
+name="nationality"
 value="Indian">
 
 </div>
@@ -224,6 +225,7 @@ value="Indian">
 <textarea
 rows="3"
 id="address"
+name="address"
 placeholder="Complete Address"
 required></textarea>
 
@@ -236,6 +238,7 @@ required></textarea>
 <input
 type="text"
 id="city"
+name="city"
 required>
 
 </div>
@@ -247,17 +250,23 @@ required>
 <input
 type="text"
 id="state"
+name="state"
 required>
 
 </div>
 
 <div class="inputBox">
 
-<label>Pincode *</label>
+<label for="pincode">Pincode *</label>
 
 <input
 type="text"
-id="<select id="marital" name="marital">"
+id="pincode"
+name="pincode"
+inputmode="numeric"
+pattern="[0-9]{6}"
+maxlength="6"
+placeholder="560001"
 required>
 
 </div>
@@ -269,6 +278,7 @@ required>
 <input
 type="text"
 id="country"
+name="country"
 value="India"
 required>
 
@@ -281,6 +291,7 @@ required>
 <input
 type="url"
 id="linkedin"
+name="linkedin"
 placeholder="https://linkedin.com/in/yourprofile">
 
 </div>
@@ -292,6 +303,7 @@ placeholder="https://linkedin.com/in/yourprofile">
 <input
 type="url"
 id="portfolio"
+name="portfolio"
 placeholder="https://yourwebsite.com">
 
 </div>
@@ -311,7 +323,9 @@ placeholder="https://yourwebsite.com">
 
 <div class="inputBox">
 <label>Highest Qualification *</label>
-<select id="qualification" required>
+<select
+id="qualification"
+name="qualification">
 <option value="">Select Qualification</option>
 <option>SSLC</option>
 <option>PUC</option>
@@ -330,27 +344,37 @@ placeholder="https://yourwebsite.com">
 
 <div class="inputBox">
 <label>Specialization / Branch</label>
-<input type="text" id="branch">
+<input
+id="branch"
+name="branch">
 </div>
 
 <div class="inputBox">
 <label>College / University *</label>
-<input type="text" id="college" required>
+<input
+id="college"
+name="college">
 </div>
 
 <div class="inputBox">
 <label>Passing Year *</label>
-<input type="text" id="passingYear" min="1990" max="2050" required>
+<input
+id="passingYear"
+name="passingYear">
 </div>
 
 <div class="inputBox">
 <label>Percentage / CGPA *</label>
-<input type="text" id="percentage" required>
+<input
+id="percentage"
+name="percentage">
 </div>
 
 <div class="inputBox">
 <label>Backlogs</label>
-<select id="backlogs">
+<select
+id="backlogs"
+name="backlogs">
 <option>No</option>
 <option>Yes</option>
 </select>
@@ -370,7 +394,9 @@ placeholder="https://yourwebsite.com">
 
 <div class="inputBox">
 <label>Total Experience *</label>
-<select id="experience" required>
+<select
+id="experience"
+name="experience">
 <option>Fresher</option>
 <option>6 Months</option>
 <option>1 Year</option>
@@ -384,27 +410,37 @@ placeholder="https://yourwebsite.com">
 
 <div class="inputBox">
 <label>Current Company</label>
-<input type="text" id="company">
+<input
+id="company"
+name="company">
 </div>
 
 <div class="inputBox">
 <label>Current Designation</label>
-<input type="text" id="designation">
+<input
+id="designation"
+name="designation">
 </div>
 
 <div class="inputBox">
 <label>Current CTC</label>
-<input type="text" id="ctc">
+<input
+id="ctc"
+name="ctc">
 </div>
 
 <div class="inputBox">
 <label>Expected CTC</label>
-<input type="text" id="expected">
+<input
+id="expected"
+name="expected">
 </div>
 
 <div class="inputBox">
 <label>Notice Period</label>
-<select id="notice">
+<select
+id="notice"
+name="notice">
 <option>Immediate</option>
 <option>15 Days</option>
 <option>30 Days</option>
@@ -415,7 +451,9 @@ placeholder="https://yourwebsite.com">
 
 <div class="inputBox full">
 <label>Work Experience Summary</label>
-<textarea id="summary" rows="4"></textarea>
+<textarea
+id="summary"
+name="summary">
 </div>
 
 </div>
@@ -461,22 +499,34 @@ placeholder="https://yourwebsite.com">
 
 <div class="inputBox">
 <label>Passport Size Photo *</label>
-<input type="file" id="photo" accept="image/*" required>
+<input
+type="file"
+id="photo"
+name="photo">
 </div>
 
 <div class="inputBox">
 <label>Resume *</label>
-<input type="file" id="resume" accept=".pdf,.doc,.docx" required>
+<input
+type="file"
+id="resume"
+name="resume">
 </div>
 
 <div class="inputBox">
 <label>Aadhaar Card</label>
-<input type="file" id="aadhaar" accept=".pdf,image/*">
+<input
+type="file"
+id="Aadhar Card"
+name="Aadhar Card">
 </div>
 
 <div class="inputBox">
 <label>PAN Card</label>
-<input type="file" id="pan" accept=".pdf,image/*">
+<input
+type="file"
+id="Pan Card"
+name="Pan Card">
 </div>
 
 </div>
