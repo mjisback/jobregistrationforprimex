@@ -348,6 +348,16 @@ function fileToBase64(file){
 
 async function sendToGoogle(){
 
+    console.log("sendToGoogle() started");
+
+    // your existing code...
+
+    console.log("Payload ready");
+
+    console.log(payload);
+
+    console.log("Calling fetch...");
+
     // -------------------------
     // File Inputs
     // -------------------------
