@@ -350,18 +350,31 @@ function fileToBase64(file){
 // Send To Google Apps Script
 // ===============================================
 
-async function sendToGoogle(){
+async function sendToGoogle() {
 
     console.log("sendToGoogle() started");
 
-    // your existing code...
+    // Collect form values...
 
-    console.log("Payload ready");
+    const payload = {
+        // all fields...
+    };
 
+    console.log("Payload Ready");
     console.log(payload);
 
-    console.log("Calling fetch...");
+    const response = await fetch(SCRIPT_URL, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(payload)
+    });
 
+    console.log("Fetch completed");
+
+    // Handle response...
+}
     // -------------------------
     // File Inputs
     // -------------------------
