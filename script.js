@@ -165,6 +165,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         e.preventDefault();
 
+        if (!form.checkValidity()) {
+    form.reportValidity();
+    return;
+}
         const fname = document.getElementById("fname").value.trim();
         const lname = document.getElementById("lname").value.trim();
         const email = document.getElementById("email").value.trim();
@@ -291,18 +295,23 @@ const SCRIPT_URL =
 // Convert File To Base64
 // =======================================
 
-async function fileToBase64(file){
+async function fileToBase64(file) {
 
-    return new Promise((resolve,reject)=>{
+    if (!file) return "";
 
-        if(!file){
+    return new Promise((resolve, reject) => {
 
-            resolve("");
+        const reader = new FileReader();
 
-            return;
+        reader.onload = () => resolve(reader.result.split(",")[1]);
 
-        }
+        reader.onerror = reject;
 
+        reader.readAsDataURL(file);
+
+    });
+
+}
         const reader=new FileReader();
 
         reader.onload=function(){
@@ -338,11 +347,6 @@ try{
 // Files
 // -----------------------------
 
-const photoInput = document.getElementById("photo");
-const resumeInput = document.getElementById("resume");
-const aadhaarInput = document.getElementById("aadhaar");
-const panInput = document.getElementById("pan");
-
 const photo = photoInput?.files?.length ? photoInput.files[0] : null;
 const resume = resumeInput?.files?.length ? resumeInput.files[0] : null;
 const aadhaar = aadhaarInput?.files?.length ? aadhaarInput.files[0] : null;
@@ -356,7 +360,7 @@ const pan = panInput?.files?.length ? panInput.files[0] : null;
 const skills=[];
 
 document
-.querySelectorAll(".skills input:checked")
+.querySelectorAll(".skills input[type='checkbox']:checked")
 .forEach(skill=>{
 
 skills.push(skill.value);
@@ -581,25 +585,25 @@ window.addEventListener("load", function () {
 // =======================================
 // Success Modal
 // =======================================
+const closeModal = document.getElementById("closeModal");
 
-document.addEventListener("DOMContentLoaded", function () {
+if (closeModal) {
+    closeModal.addEventListener("click", () => {
+        successModal.style.display = "none";
+    });
+}
 
-    const closeModal = document.getElementById("closeModal");
+// =======================================
+// Reset Button
+// =======================================
 
-    if (closeModal) {
+const resetBtn = document.querySelector(".resetBtn");
 
-        closeModal.addEventListener("click", function () {
-
-            if (successModal) {
-
-                successModal.style.display = "none";
-
-            }
-
-        });
-
-    }
-
+if (resetBtn) {
+    resetBtn.addEventListener("click", () => {
+        hideLoading();
+    });
+}
     window.addEventListener("click", function (e) {
 
         if (successModal && e.target === successModal) {
@@ -612,30 +616,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-
-// =======================================
-// Reset Button
-// =======================================
-
-document.addEventListener("DOMContentLoaded", function () {
-
-    const resetBtn = document.querySelector(".resetBtn");
-
-    if (resetBtn) {
-
-        resetBtn.addEventListener("click", function () {
-
-            setTimeout(() => {
-
-                hideLoading();
-
-            }, 200);
-
-        });
-
-    }
-
-});
 
 
 // =======================================
