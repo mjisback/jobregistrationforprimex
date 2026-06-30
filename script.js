@@ -1,45 +1,48 @@
-// ===============================================
+//======================================================
 // PRIMEX JOB PORTAL
 // script.js
 // PART 1
-// Initialization, Validation & Helper Functions
-// ===============================================
+//======================================================
 
-// ==============================
+//------------------------------------------------------
+// GOOGLE APPS SCRIPT URL
+//------------------------------------------------------
+
+const SCRIPT_URL = "YOUR_WEB_APP_URL_HERE";
+
+//------------------------------------------------------
 // GLOBAL VARIABLES
-// ==============================
-
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyByTTviFH-8-ugdOCeggSmu-rR-_f8WYGY18Bee41fIMAR9MZnbpEnNdr_6SUbUYFj/exec";
+//------------------------------------------------------
 
 let form;
 let loading;
 let submitBtn;
 let successModal;
 
-// ==============================
-// DOM READY
-// ==============================
+//------------------------------------------------------
+// PAGE LOAD
+//------------------------------------------------------
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 
     form = document.getElementById("jobForm");
     loading = document.getElementById("loading");
     submitBtn = document.querySelector(".submitBtn");
     successModal = document.getElementById("successModal");
 
-    initializeSlider();
-    initializeValidation();
-    initializeFileValidation();
+    startSlider();
 
-    form.addEventListener("submit", submitApplication);
+    initializeValidation();
+
+    initializeForm();
 
 });
 
-// ==============================
-// BACKGROUND SLIDER
-// ==============================
+//======================================================
+// BACKGROUND IMAGE SLIDER
+//======================================================
 
-function initializeSlider() {
+function startSlider() {
 
     const slides = document.querySelectorAll(".slide");
 
@@ -55,21 +58,18 @@ function initializeSlider() {
 
         current++;
 
-        if (current >= slides.length) {
-
+        if (current >= slides.length)
             current = 0;
-
-        }
 
         slides[current].classList.add("active");
 
-    }, 4000);
+    }, 3000);
 
 }
 
-// ==============================
-// VALIDATION
-// ==============================
+//======================================================
+// INPUT VALIDATION
+//======================================================
 
 function initializeValidation() {
 
@@ -77,8 +77,6 @@ function initializeValidation() {
     lettersOnly("lname");
     lettersOnly("city");
     lettersOnly("state");
-    lettersOnly("branch");
-    lettersOnly("college");
 
     numbersOnly("mobile",10);
 
@@ -86,9 +84,9 @@ function initializeValidation() {
 
 }
 
-// ==============================
+//------------------------------------------------------
 // LETTERS ONLY
-// ==============================
+//------------------------------------------------------
 
 function lettersOnly(id){
 
@@ -98,15 +96,15 @@ function lettersOnly(id){
 
     input.addEventListener("input",function(){
 
-        this.value=this.value.replace(/[^A-Za-z ]/g,'');
+        this.value=this.value.replace(/[^A-Za-z ]/g,"");
 
     });
 
 }
 
-// ==============================
+//------------------------------------------------------
 // NUMBERS ONLY
-// ==============================
+//------------------------------------------------------
 
 function numbersOnly(id,max){
 
@@ -116,11 +114,11 @@ function numbersOnly(id,max){
 
     input.addEventListener("input",function(){
 
-        this.value=this.value.replace(/\D/g,'');
+        this.value=this.value.replace(/\D/g,"");
 
         if(this.value.length>max){
 
-            this.value=this.value.slice(0,max);
+            this.value=this.value.substring(0,max);
 
         }
 
@@ -128,9 +126,9 @@ function numbersOnly(id,max){
 
 }
 
-// ==============================
+//======================================================
 // EMAIL VALIDATION
-// ==============================
+//======================================================
 
 function validEmail(email){
 
@@ -138,49 +136,36 @@ function validEmail(email){
 
 }
 
-// ==============================
+//======================================================
 // FILE VALIDATION
-// ==============================
+//======================================================
 
-function initializeFileValidation(){
+function validateFile(input,maxMB){
 
-    validateFile("photo",2);
+    if(!input || input.files.length===0)
+        return true;
 
-    validateFile("resume",5);
+    const file=input.files[0];
 
-    validateFile("aadhaar",5);
+    const max=maxMB*1024*1024;
 
-    validateFile("pan",5);
+    if(file.size>max){
 
-}
+        alert(file.name+" exceeds "+maxMB+" MB");
 
-function validateFile(id,maxSize){
+        input.value="";
 
-    const input=document.getElementById(id);
+        return false;
 
-    if(!input) return;
+    }
 
-    input.addEventListener("change",function(){
-
-        if(this.files.length===0) return;
-
-        const file=this.files[0];
-
-        if(file.size>(maxSize*1024*1024)){
-
-            alert(file.name+" exceeds "+maxSize+" MB");
-
-            this.value="";
-
-        }
-
-    });
+    return true;
 
 }
 
-// ==============================
-// SHOW LOADING
-// ==============================
+//======================================================
+// LOADING
+//======================================================
 
 function showLoading(){
 
@@ -200,10 +185,6 @@ function showLoading(){
 
 }
 
-// ==============================
-// HIDE LOADING
-// ==============================
-
 function hideLoading(){
 
     if(loading){
@@ -222,63 +203,58 @@ function hideLoading(){
 
 }
 
-// ==============================
-// FORM VALIDATION
-// ==============================
+//======================================================
+// INITIALIZE FORM
+//======================================================
 
-function validateForm(){
+function initializeForm(){
 
-    if(!form.checkValidity()){
+    if(!form) return;
 
-        form.reportValidity();
-
-        return false;
-
-    }
-
-    const email=document.getElementById("email").value.trim();
-
-    if(!validEmail(email)){
-
-        alert("Invalid Email Address");
-
-        return false;
-
-    }
-
-    if(document.getElementById("mobile").value.length!==10){
-
-        alert("Enter valid Mobile Number");
-
-        return false;
-
-    }
-
-    if(document.getElementById("pincode").value.length!==6){
-
-        alert("Enter valid Pincode");
-
-        return false;
-
-    }
-
-    return true;
+    form.addEventListener("submit",submitApplication);
 
 }
 
-// ==============================
-// SUBMIT BUTTON
-// ==============================
+//======================================================
+// SUBMIT
+//======================================================
 
 async function submitApplication(e){
 
     e.preventDefault();
 
-    if(!validateForm()){
+    if(!form.checkValidity()){
+
+        form.reportValidity();
 
         return;
 
     }
+
+    const email=document.getElementById("email").value.trim();
+
+    const mobile=document.getElementById("mobile").value.trim();
+
+    if(!validEmail(email)){
+
+        alert("Invalid Email");
+
+        return;
+
+    }
+
+    if(mobile.length!==10){
+
+        alert("Invalid Mobile Number");
+
+        return;
+
+    }
+
+    if(!validateFile(document.getElementById("photo"),2)) return;
+    if(!validateFile(document.getElementById("resume"),5)) return;
+    if(!validateFile(document.getElementById("aadhaar"),5)) return;
+    if(!validateFile(document.getElementById("pan"),5)) return;
 
     showLoading();
 
@@ -287,57 +263,45 @@ async function submitApplication(e){
         await sendToGoogle();
 
     }
+    catch(error){
 
-    catch(err){
+        console.error(error);
 
-    hideLoading();
+        hideLoading();
 
-    console.error("FULL ERROR:", err);
+        alert("Unable to submit application.");
 
-    alert(
-        "Error Name: " + err.name +
-        "\n\nMessage: " + err.message +
-        "\n\nSee Console (F12) for details."
-    );
+    }
 
 }
 
-}
-
-// ===============================================
+//======================================================
 // PART 2
 // Google Apps Script Integration
-// ===============================================
+//======================================================
 
-// ===============================================
+//------------------------------------------------------
 // Convert File To Base64
-// ===============================================
+//------------------------------------------------------
 
-function fileToBase64(file){
+function fileToBase64(file) {
 
-    return new Promise((resolve,reject)=>{
+    return new Promise((resolve, reject) => {
 
-        if(!file){
-
+        if (!file) {
             resolve("");
-
             return;
-
         }
 
-        const reader=new FileReader();
+        const reader = new FileReader();
 
-        reader.onload=function(){
+        reader.onload = function (e) {
 
-            resolve(reader.result.split(",")[1]);
-
-        };
-
-        reader.onerror=function(error){
-
-            reject(error);
+            resolve(e.target.result.split(",")[1]);
 
         };
+
+        reader.onerror = reject;
 
         reader.readAsDataURL(file);
 
@@ -345,237 +309,197 @@ function fileToBase64(file){
 
 }
 
-
-// ===============================================
-// Send To Google Apps Script
-// ===============================================
+//======================================================
+// SEND TO GOOGLE APPS SCRIPT
+//======================================================
 
 async function sendToGoogle() {
 
-    console.log("sendToGoogle() started");
+    //--------------------------------------------------
+    // FILE INPUTS
+    //--------------------------------------------------
 
-    // Collect form values...
+    const photoInput = document.getElementById("photo");
+    const resumeInput = document.getElementById("resume");
+    const aadhaarInput = document.getElementById("aadhaar");
+    const panInput = document.getElementById("pan");
 
-    const payload = {
-        // all fields...
-    };
+    const photo = photoInput.files.length ? photoInput.files[0] : null;
+    const resume = resumeInput.files.length ? resumeInput.files[0] : null;
+    const aadhaar = aadhaarInput.files.length ? aadhaarInput.files[0] : null;
+    const pan = panInput.files.length ? panInput.files[0] : null;
 
-    console.log("Payload Ready");
-    console.log(payload);
+    //--------------------------------------------------
+    // SKILLS
+    //--------------------------------------------------
 
-    const response = await fetch(SCRIPT_URL, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(payload)
-    });
-
-    console.log("Fetch completed");
-
-    // Handle response...
-}
-    // -------------------------
-    // File Inputs
-    // -------------------------
-
-    const photoInput=document.getElementById("photo");
-    const resumeInput=document.getElementById("resume");
-    const aadhaarInput=document.getElementById("aadhaar");
-    const panInput=document.getElementById("pan");
-
-    const photo=photoInput.files[0]||null;
-    const resume=resumeInput.files[0]||null;
-    const aadhaar=aadhaarInput.files[0]||null;
-    const pan=panInput.files[0]||null;
-
-
-    // -------------------------
-    // Skills
-    // -------------------------
-
-    const skills=[];
+    const skills = [];
 
     document.querySelectorAll(".skills input[type='checkbox']:checked")
-    .forEach(item=>{
+        .forEach(item => {
 
-        skills.push(item.value);
+            skills.push(item.value);
 
-    });
+        });
 
+    //--------------------------------------------------
+    // PAYLOAD
+    //--------------------------------------------------
 
-    // -------------------------
-    // Payload
-    // -------------------------
+    const payload = {
 
-    const payload={
+        firstName: document.getElementById("fname").value.trim(),
+        lastName: document.getElementById("lname").value.trim(),
+        email: document.getElementById("email").value.trim(),
+        mobile: document.getElementById("mobile").value.trim(),
+        dob: document.getElementById("dob").value,
+        gender: document.getElementById("gender").value,
+        marital: document.getElementById("marital").value,
+        nationality: document.getElementById("nationality").value,
+        address: document.getElementById("address").value.trim(),
+        city: document.getElementById("city").value.trim(),
+        state: document.getElementById("state").value.trim(),
+        pincode: document.getElementById("pincode").value,
+        country: document.getElementById("country").value,
+        linkedin: document.getElementById("linkedin").value.trim(),
+        portfolio: document.getElementById("portfolio").value.trim(),
 
-        firstName:document.getElementById("fname").value.trim(),
+        qualification: document.getElementById("qualification").value,
+        branch: document.getElementById("branch").value.trim(),
+        college: document.getElementById("college").value.trim(),
+        passingYear: document.getElementById("passingYear").value,
+        percentage: document.getElementById("percentage").value,
+        backlogs: document.getElementById("backlogs").value,
 
-        lastName:document.getElementById("lname").value.trim(),
+        experience: document.getElementById("experience").value,
+        company: document.getElementById("company").value.trim(),
+        designation: document.getElementById("designation").value.trim(),
+        currentCTC: document.getElementById("ctc").value,
+        expectedCTC: document.getElementById("expected").value,
+        notice: document.getElementById("notice").value,
+        summary: document.getElementById("summary").value.trim(),
 
-        email:document.getElementById("email").value.trim(),
+        department: document.getElementById("department").value,
+        shift: document.getElementById("shift").value,
 
-        mobile:document.getElementById("mobile").value.trim(),
+        skills: skills.join(", "),
 
-        dob:document.getElementById("dob").value,
+        photoName: photo ? photo.name : "",
+        resumeName: resume ? resume.name : "",
+        aadhaarName: aadhaar ? aadhaar.name : "",
+        panName: pan ? pan.name : "",
 
-        gender:document.getElementById("gender").value,
-
-        marital:document.getElementById("marital").value,
-
-        nationality:document.getElementById("nationality").value,
-
-        address:document.getElementById("address").value.trim(),
-
-        city:document.getElementById("city").value.trim(),
-
-        state:document.getElementById("state").value.trim(),
-
-        pincode:document.getElementById("pincode").value.trim(),
-
-        country:document.getElementById("country").value,
-
-        linkedin:document.getElementById("linkedin").value.trim(),
-
-        portfolio:document.getElementById("portfolio").value.trim(),
-
-        qualification:document.getElementById("qualification").value,
-
-        branch:document.getElementById("branch").value.trim(),
-
-        college:document.getElementById("college").value.trim(),
-
-        passingYear:document.getElementById("passingYear").value,
-
-        percentage:document.getElementById("percentage").value,
-
-        backlogs:document.getElementById("backlogs").value,
-
-        certifications:document.getElementById("certifications").value,
-
-        experience:document.getElementById("experience").value,
-
-        company:document.getElementById("company").value.trim(),
-
-        designation:document.getElementById("designation").value.trim(),
-
-        currentCTC:document.getElementById("ctc").value,
-
-        expectedCTC:document.getElementById("expected").value,
-
-        notice:document.getElementById("notice").value,
-
-        location:document.getElementById("location").value,
-
-        joiningDate:document.getElementById("joiningDate").value,
-
-        employment:document.getElementById("employment").value,
-
-        summary:document.getElementById("summary").value,
-
-        department:document.getElementById("department").value,
-
-        shift:document.getElementById("shift").value,
-
-        skills:skills.join(", "),
-
-        photoName:photo?photo.name:"",
-
-        resumeName:resume?resume.name:"",
-
-        aadhaarName:aadhaar?aadhaar.name:"",
-
-        panName:pan?pan.name:"",
-
-        photoData:await fileToBase64(photo),
-
-        resumeData:await fileToBase64(resume),
-
-        aadhaarData:await fileToBase64(aadhaar),
-
-        panData:await fileToBase64(pan)
+        photoData: await fileToBase64(photo),
+        resumeData: await fileToBase64(resume),
+        aadhaarData: await fileToBase64(aadhaar),
+        panData: await fileToBase64(pan)
 
     };
 
-
-    console.log("Submitting Payload");
-
+    console.log("Submitting Payload...");
     console.log(payload);
 
+    //--------------------------------------------------
+    // SEND REQUEST
+    //--------------------------------------------------
 
-    // -------------------------
-    // Send Request
-    // -------------------------
+    try {
 
-    const response=await fetch(SCRIPT_URL,{
+        const response = await fetch(SCRIPT_URL, {
 
-        method:"POST",
+            method: "POST",
 
-        headers:{
+            headers: {
 
-            "Content-Type":"application/json"
+                "Content-Type": "application/json"
 
-        },
+            },
 
-        body:JSON.stringify(payload)
+            body: JSON.stringify(payload)
 
-    });
+        });
 
+        const text = await response.text();
 
-    if(!response.ok){
+        console.log("Server Response:");
+        console.log(text);
 
-        hideLoading();
+        let result;
 
-        throw new Error("HTTP Error : "+response.status);
+        try {
 
-    }
+            result = JSON.parse(text);
 
+        } catch {
 
-    const result=await response.json();
+            hideLoading();
 
+            alert("Invalid response from server.");
 
-    if(result.status==="success"){
-
-        hideLoading();
-
-        form.reset();
-
-        if(successModal){
-
-            successModal.style.display="flex";
+            return;
 
         }
 
-        console.log(result);
+        //--------------------------------------------------
+        // SUCCESS
+        //--------------------------------------------------
 
-        return;
+        if (result.status === "success") {
+
+            hideLoading();
+
+            form.reset();
+
+            if (successModal) {
+
+                successModal.style.display = "flex";
+
+            }
+
+            console.log(result.applicationID);
+
+            return;
+
+        }
+
+        //--------------------------------------------------
+        // SERVER ERROR
+        //--------------------------------------------------
+
+        hideLoading();
+
+        alert(result.message || "Application could not be submitted.");
 
     }
 
+    catch (error) {
 
-    hideLoading();
+        console.error(error);
 
-    alert(result.message);
+        hideLoading();
+
+        alert("Unable to connect to Google Apps Script.");
+
+    }
 
 }
 
-// ===============================================
+//======================================================
 // PART 3
-// Success Modal, Reset, Utilities & Final Setup
-// ===============================================
+// Success Modal, Reset, Utilities
+//======================================================
 
-// ===============================================
-// PAGE LOAD ANIMATION
-// ===============================================
+//------------------------------------------------------
+// PAGE LOADED
+//------------------------------------------------------
 
-window.addEventListener("load", function () {
+window.addEventListener("load", () => {
 
     document.body.style.opacity = "0";
 
-    setTimeout(function () {
+    setTimeout(() => {
 
-        document.body.style.transition = "opacity 0.6s ease";
+        document.body.style.transition = "opacity 0.6s";
 
         document.body.style.opacity = "1";
 
@@ -583,17 +507,17 @@ window.addEventListener("load", function () {
 
 });
 
-// ===============================================
+//------------------------------------------------------
 // SUCCESS MODAL
-// ===============================================
+//------------------------------------------------------
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 
     const closeBtn = document.getElementById("closeModal");
 
     if (closeBtn) {
 
-        closeBtn.addEventListener("click", function () {
+        closeBtn.addEventListener("click", () => {
 
             successModal.style.display = "none";
 
@@ -601,37 +525,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-});
+    window.addEventListener("click", function (e) {
 
-// ===============================================
-// CLOSE MODAL ON OUTSIDE CLICK
-// ===============================================
-
-window.addEventListener("click", function (e) {
-
-    if (successModal && e.target === successModal) {
-
-        successModal.style.display = "none";
-
-    }
-
-});
-
-// ===============================================
-// RESET BUTTON
-// ===============================================
-
-document.addEventListener("DOMContentLoaded", function () {
-
-    const resetBtn = document.querySelector(".resetBtn");
-
-    if (!resetBtn) return;
-
-    resetBtn.addEventListener("click", function () {
-
-        hideLoading();
-
-        if (successModal) {
+        if (e.target === successModal) {
 
             successModal.style.display = "none";
 
@@ -641,27 +537,51 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-// ===============================================
+//------------------------------------------------------
+// RESET BUTTON
+//------------------------------------------------------
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const resetBtn = document.querySelector(".resetBtn");
+
+    if (resetBtn) {
+
+        resetBtn.addEventListener("click", () => {
+
+            hideLoading();
+
+        });
+
+    }
+
+});
+
+//------------------------------------------------------
 // FILE NAME PREVIEW
-// ===============================================
+//------------------------------------------------------
 
-document.querySelectorAll("input[type='file']").forEach(function (input) {
+document.addEventListener("DOMContentLoaded", () => {
 
-    input.addEventListener("change", function () {
+    document.querySelectorAll("input[type='file']").forEach(input => {
 
-        if (this.files.length > 0) {
+        input.addEventListener("change", function () {
 
-            console.log("Selected :", this.files[0].name);
+            if (this.files.length > 0) {
 
-        }
+                console.log("Selected:", this.files[0].name);
+
+            }
+
+        });
 
     });
 
 });
 
-// ===============================================
+//------------------------------------------------------
 // SCROLL TO TOP
-// ===============================================
+//------------------------------------------------------
 
 function scrollTopSmooth() {
 
@@ -675,9 +595,9 @@ function scrollTopSmooth() {
 
 }
 
-// ===============================================
+//------------------------------------------------------
 // SUCCESS
-// ===============================================
+//------------------------------------------------------
 
 function applicationSuccess(applicationID) {
 
@@ -697,57 +617,28 @@ function applicationSuccess(applicationID) {
 
     }
 
-    console.log("Application ID :", applicationID);
+    console.log("Application Submitted");
+
+    console.log("Application ID:", applicationID);
 
 }
 
-// ===============================================
+//------------------------------------------------------
 // ERROR
-// ===============================================
+//------------------------------------------------------
 
 function applicationError(message) {
 
     hideLoading();
 
-    console.error(message);
-
     alert(message);
 
 }
 
-// ===============================================
-// GLOBAL ERROR HANDLER
-// ===============================================
+//------------------------------------------------------
+// CONSOLE MESSAGE
+//------------------------------------------------------
 
-window.addEventListener("error", function (e) {
-
-    hideLoading();
-
-    console.error("JavaScript Error");
-
-    console.error(e.message);
-
-});
-
-// ===============================================
-// UNHANDLED PROMISE
-// ===============================================
-
-window.addEventListener("unhandledrejection", function (e) {
-
-    hideLoading();
-
-    console.error("Unhandled Promise");
-
-    console.error(e.reason);
-
-});
-
-// ===============================================
-// DEBUG
-// ===============================================
-
-console.log("========================================");
+console.log("=======================================");
 console.log(" PRIMEX JOB PORTAL LOADED SUCCESSFULLY ");
-console.log("========================================");
-console.log("Google Apps Script URL :", SCRIPT_URL);
+console.log("=======================================");
