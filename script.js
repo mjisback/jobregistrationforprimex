@@ -288,15 +288,19 @@ async function submitApplication(e){
 
     }
 
-    catch(error){
+    catch(err){
 
-        console.error(error);
+    hideLoading();
 
-        hideLoading();
+    console.error("FULL ERROR:", err);
 
-        alert("Unable to submit application.");
+    alert(
+        "Error Name: " + err.name +
+        "\n\nMessage: " + err.message +
+        "\n\nSee Console (F12) for details."
+    );
 
-    }
+}
 
 }
 
