@@ -288,7 +288,7 @@ function hideLoading() {
 
 // Your Google Apps Script Web App URL
 const SCRIPT_URL =
-"AKfycbw5M_R3nNWhMb7f1QcZb2Bg9y3H8aYvXEpqOuzQB3Y";
+"https://script.google.com/macros/s/AKfycbyByTTviFH-8-ugdOCeggSmu-rR-_f8WYGY18Bee41fIMAR9MZnbpEnNdr_6SUbUYFj/exec";
 
 
 // =======================================
@@ -551,12 +551,16 @@ alert(result.message || "Application could not be submitted.");
 }
 catch (error) {
 
-    console.error(error);
+    console.error("Fetch Error:", error);
+    console.error("Error Name:", error.name);
+    console.error("Error Message:", error.message);
 
     hideLoading();
 
-    alert("Unable to connect to Google Apps Script.\n\n" + error.message);
-
+    alert(
+        "Unable to connect to Google Apps Script.\n\n" +
+        "Error: " + error.message
+    );
 }
 
 }
